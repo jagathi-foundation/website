@@ -4,7 +4,7 @@ import { PillarsListType } from "../types/AboutTypes";
 interface Props {
   pillars: PillarsListType;
 }
-
+//Might change from 3 to 4
 const Pillars: React.FC<Props> = ({ pillars }) => {
   return (
     <>
