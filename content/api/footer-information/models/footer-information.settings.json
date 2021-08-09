@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_informations",
+  "info": {
+    "name": "Footer Information"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "twitterURL": {
+      "type": "string"
+    },
+    "youtubeURL": {
+      "type": "string"
+    },
+    "facebookURL": {
+      "type": "string"
+    },
+    "instagramURL": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "bankaddressURL": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/project-topics",
+      "handler": "project-topics.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/project-topics/count",
+      "handler": "project-topics.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/project-topics/:id",
+      "handler": "project-topics.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/project-topics",
+      "handler": "project-topics.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/project-topics/:id",
+      "handler": "project-topics.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/project-topics/:id",
+      "handler": "project-topics.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

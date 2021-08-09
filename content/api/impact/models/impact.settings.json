@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "impacts",
+  "info": {
+    "name": "Impact",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "servedpeople": {
+      "type": "integer"
+    },
+    "volunteers": {
+      "type": "integer"
+    },
+    "workhours": {
+      "type": "integer"
+    }
+  }
+}

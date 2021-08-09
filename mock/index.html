@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jagathi Foundation | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="logo.svg" />
+  </head>
+  <body class="font-main bg-white">
+    <nav class="flex justify-between items-center py-7 px-8">
+      <div class="flex items-center cursor-pointer" onclick="window.location.href='./'">
+        <img src="logo.svg" alt="logo" class="w-11 h-11" />
+        <h1 class="text-3xl px-3">Jagathi Foundation</h1>
+      </div>
+      <div class="item-center hidden lg:flex">
+        <a href="./" class="px-5 text-lg cursor-pointer hover:underline">Home</a>
+        <a href="about.html" class="px-5 text-lg cursor-pointer hover:underline"
+          >About</a
+        >
+        <a href="projects.html" class="px-5 text-lg cursor-pointer hover:underline"
+          >Projects</a
+        >
+        <a href="redirecttovolunteer.html" class="px-5 text-lg cursor-pointer hover:underline"
+          >Volunteer</a
+        >
+      </div>
+      <div class="block lg:hidden"><img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" class="w-10"/></div>
+    </nav>
+    <main>
+      <div class="carousel relative bg-gray-300 border-gray-300 border-2 rounded-md">
+        <div class="carousel-inner relative overflow-hidden w-full">
+          <!--Slide 1-->
+          <input
+            class="carousel-open"
+            type="radio"
+            id="carousel-1"
+            name="carousel"
+            aria-hidden="true"
+            hidden=""
+            checked="checked"
+          />
+          <div class="carousel-item absolute opacity-0" style="height: 530px">
+            <img
+              src="banner01.png"
+              alt="Banner 1"
+              class="h-full w-full object-contain"
+            />
+          </div>
+          <label
+            for="carousel-3"
+            class="
+              prev
+              control-1
+              w-10
+              h-10
+              ml-2
+              md:ml-10
+              absolute
+              cursor-pointer
+              hidden
+              text-3xl
+              hover:text-white
+              font-bold
+              text-black
+              rounded-full
+              bg-white
+              hover:bg-yellow-500
+              leading-tight
+              text-center
+              z-10
+              inset-y-0
+              2xl:left-96
+              left-0
+              my-auto
+            "
+            >‹</label
+          >
+          <label
+            for="carousel-2"
+            class="
+              next
+              control-1
+              w-10
+              h-10
+              mr-2
+              md:mr-10
+              absolute
+              cursor-pointer
+              hidden
+              text-3xl
+              font-bold
+              text-black
+              hover:bg-yellow-500 hover:text-white
+              rounded-full
+              bg-white
+              leading-tight
+              text-center
+              z-10
+              inset-y-0
+              2xl:right-96
+              right-0
+
+              my-auto
+            "
+            >›</label
+          >
+
+          <!--Slide 2-->
+          <input
+            class="carousel-open"
+            type="radio"
+            id="carousel-2"
+            name="carousel"
+            aria-hidden="true"
+            hidden=""
+          />
+          <div class="carousel-item absolute opacity-0" style="height: 530px">
+            <video
+              src="https://www.gatesfoundation.org/-/media/be43fcc0c4844359859f323005738d61.ashx"
+              alt="Banner 2"
+              class="h-full w-full object-contain"
+              muted
+              loop
+              autoplay
+            />
+          </div>
+          <label
+            for="carousel-1"
+            class="
+              prev
+              control-2
+              w-10
+              h-10
+              ml-2
+              md:ml-10
+              absolute
+              cursor-pointer
+              hidden
+              text-3xl
+              font-bold
+              text-black
+              hover:text-white
+              rounded-full
+              bg-white
+              hover:bg-yellow-500
+              0
+              leading-tight
+              text-center
+              z-10
+              inset-y-0
+              left-96
+              my-auto
+            "
+            >‹</label
+          >
+          <label
+            for="carousel-3"
+            class="
+              next
+              control-2
+              w-10
+              h-10
+              mr-2
+              md:mr-10
+              absolute
+              cursor-pointer
+              hidden
+              text-3xl
+              font-bold
+              text-black
+              hover:text-white
+              rounded-full
+              bg-white
+              hover:bg-yellow-500
+              leading-tight
+              text-center
+              z-10
+              inset-y-0
+              right-96
+              my-auto
+            "
+            >›</label
+          >
+
+          <!--Slide 3-->
+          <input
+            class="carousel-open"
+            type="radio"
+            id="carousel-3"
+            name="carousel"
+            aria-hidden="true"
+            hidden=""
+          />
+          <div class="carousel-item absolute opacity-0" style="height: 530px">
+            <img
+              src="banner03.jpg"
+              alt="Banner 1"
+              class="h-full w-full object-contain"
+            />
+          </div>
+          <label
+            for="carousel-2"
+            class="
+              prev
+              control-3
+              w-10
+              h-10
+              ml-2
+              md:ml-10
+              absolute
+              cursor-pointer
+              hidden
+              text-3xl
+              font-bold
+              text-black
+              hover:text-white
+              rounded-full
+              bg-white
+              hover:bg-yellow-500
+              leading-tight
+              text-center
+              z-10
+              inset-y-0
+              left-96
+              my-auto
+            "
+            >‹</label
+          >
+          <label
+            for="carousel-1"
+            class="
+              next
+              control-3
+              w-10
+              h-10
+              mr-2
+              md:mr-10
+              absolute
+              cursor-pointer
+              hidden
+              text-3xl
+              font-bold
+              text-black
+              hover:text-white
+              rounded-full
+              bg-white
+              hover:bg-yellow-500
+              leading-tight
+              text-center
+              z-10
+              inset-y-0
+              right-96
+              my-auto
+            "
+            >›</label
+          >
+
+          <!-- Add additional indicators for each slide-->
+          <ol class="carousel-indicators">
+            <li class="inline-block mr-3">
+              <label
+                for="carousel-1"
+                class="carousel-bullet cursor-pointer block text-5xl text-white"
+                >•</label
+              >
+            </li>
+            <li class="inline-block mr-3">
+              <label
+                for="carousel-2"
+                class="carousel-bullet cursor-pointer block text-5xl text-white"
+                >•</label
+              >
+            </li>
+            <li class="inline-block mr-3">
+              <label
+                for="carousel-3"
+                class="carousel-bullet cursor-pointer block text-5xl text-white"
+                >•</label
+              >
+            </li>
+          </ol>
+        </div>
+      </div>
+      <h1 class="text-3xl text-center pt-10">Who Are We?</h1>
+      <div class="flex justify-center w-4/5 mx-auto lg:my-5 mt-5 max-w-5xl flex-col lg:flex-row">
+        <img
+          src="jagathi.png"
+          alt="Jagathi"
+          style=" max-height: 200px;"
+          class="w-96 lg:max-w-md object-cover object-center m-auto"
+        />
+        <div class="lg:px-8 xl:text-xl text-lg text-center lg:text-left m-auto mx-3 lg:w-auto my-7">
+          <p>
+            We are a nonprofit based in India that hopes to transform the lives
+            of the deprived/most deserved poor comunitites by providing quality
+            education, health, hygine and gender equality.
+          </p>
+          <button class="my-5 bg-yellow-500 text-white rounded px-5 lg:py-1 py-3">
+            Read More
+          </button>
+        </div>
+      </div>
+      <h1 class="text-center text-3xl lg:py-6 pb-6">Our Impact</h1>
+      <div class="w-full bg-gray-300">
+        <div class="flex justify-between items-center m-auto max-w-7xl md:flex-row flex-col">
+          <div class="pb-5 pt-3 lg:pt-5 lg:px-10 px-6">
+            <span
+              class="iconify text-center w-10 m-auto my-3 text-5xl text-yellow-800"
+              data-inline="false"
+              data-icon="akar-icons:heart"
+            ></span>
+            <h1 class="lg:text-2xl text-xl">
+              <sup class="lg:text-xl text-lg text-yellow-800 px-1">500</sup>People Served
+            </h1>
+          </div>
+          <div class="py-5 lg:px-10 px-6">
+            <span class="iconify text-center m-auto my-3 text-5xl text-yellow-800" data-icon="bi:person" data-inline="false"></span>
+            <h1 class="lg:text-2xl text-xl">
+              <sup class="lg:text-xl text-lg text-yellow-800 px-1">100</sup>Volunteers
+            </h1>
+          </div>
+          <div class="py-5 lg:px-10 px-6">
+            <span
+              class="iconify text-center text-5xl m-auto my-3 text-yellow-800"
+              data-inline="false"
+              data-icon="ant-design:field-time-outlined"
+            ></span>
+            <h1 class="lg:text-2xl text-xl">
+              <sup class="lg:text-xl text-lg text-yellow-800 px-1">500</sup>Work Hours
+            </h1>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-center pt-12 pb-5 text-3xl px-6">Current Project Topics</h1>
+      <div
+        class="
+          grid grid-rows-1 grid-cols-1
+          gap-y-10
+          xl:gap-y-0
+          items-center
+          justify-center
+          m-auto
+          my-5
+          place-items-center
+          md:grid-cols-2 md:grid-rows-2
+          lg:grid-cols-3 lg:grid-rows-2
+          max-w-7xl
+        "
+      >
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="womenedu.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">Women Edu</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Educating Women on the topics they need to lead a steady life.
+          </p>
+        </div>
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img src="womenemp.png" alt="W" class="rounded-t-md w-full" />
+          <h1 class="text-center pt-4 text-2xl px-3">Women Empowering</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Helping women focus and move into a working life.
+          </p>
+        </div>
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="kidhealth.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl px-3">Kids Health and Edu</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Enforcing that children lead a academic path instead of working.
+          </p>
+        </div>
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="womenhealth.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl px-3">Womens Health</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Working towards safety regarding women related health issues.
+          </p>
+        </div>
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="enviroment.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl px-3">Enviroment</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Spreading awarness related to protecing the enviroment.
+          </p>
+        </div>
+        <div
+          class="
+            bg-gray-300
+            mx-10
+            rounded-md
+            shadow-lg
+            cursor-pointer
+            md:my-5
+            my-0
+            max-w-xs
+          "
+        >
+          <img
+            src="covidother.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-cente"
+          />
+          <h1 class="text-center pt-4 text-2xl px-3">Covid/Other</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Helping subdue the effects of COVID and contributing towards other
+            fields.
+          </p>
+        </div>
+      </div>
+      <div class="w-full text-center py-5">
+        <button class="mb-3 bg-yellow-500 text-white rounded px-5 py-1 text-xl">
+          Read More
+        </button>
+      </div>
+    </main>
+    <footer class="w-full bg-black text-center text-white">
+      <div class="flex justify-center lg:py-5 lg:flex-row flex-col pt-2 items-center">
+        <div
+          class="
+            text-center
+            px-5
+            items-center
+            justify-center
+            m-auto
+            lg:m-0 lg:py-0
+            py-4
+          "
+        >
+          <h1>Socials</h1>
+          <div class="flex mt-2">
+            <img src="twit.png" alt="tw" class="w-12 h-8 lg:mx-2 mx-1" />
+            <span
+              class="iconify iconify text-3xl lg:mx-2 w-12 h-8 mx-1"
+              data-inline="false"
+              data-icon="logos:facebook"
+            ></span
+            ><span
+              class="iconify text-3xl lg:mx-2 w-12 h-8 mx-1"
+              data-inline="false"
+              data-icon="logos:youtube-icon"
+            ></span>
+            <img
+              src="logos_instagram-icon.png"
+              alt="insta"
+              class="w-9 h-9 lg:mx-2 mx-1"
+            />
+          </div>
+        </div>
+        <div class="text-center lg:px-5 lg:m-0 m-auto py-4 lg:py-0">
+          <h1>Get In Touch</h1>
+          <h3 class="md:flex">
+            <span class="px-3">📧</span> jagathifoundation@gmail.com
+          </h3>
+          <h3 class="lg:flex"><span class="px-3">🏠</span>Hyderbad, India</h3>
+        </div>
+        <div class="text-center px-5 lg:py-0 py-4">
+          <h1>Donate</h1>
+          <p>To donate, click <span class="text-yellow-500">here</span> and help.</p>
+        </div>
+      </div>
+      <div class="border-t-2 border-yellow-600 w-1/2 m-auto py-3 lg:pb-3 pb-6">
+        © All Rights Reserved by Jagathi Foundation
+      </div>
+    </footer>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pillars",
+      "handler": "pillars.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pillars/count",
+      "handler": "pillars.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pillars/:id",
+      "handler": "pillars.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pillars",
+      "handler": "pillars.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pillars/:id",
+      "handler": "pillars.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pillars/:id",
+      "handler": "pillars.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

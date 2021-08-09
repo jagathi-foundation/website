@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pillars",
+  "info": {
+    "name": "Pillars"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "project": {
+      "via": "pillars",
+      "model": "project"
+    }
+  }
+}

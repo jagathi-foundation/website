@@ -1,0 +1,26 @@
+For the CMS:
+
+@if: We Use Sanity - Sanity has its own deployment platform. Just run `sanity deploy` and we have a CMS Admin Area at jagathifoundation.sanity.studio.
+@if: We Use Strapi - Strapi does not have its own deployment platform so we need to host somewhere else. Since this is not front facing, the best option is to just pick the cheepest option. This would be Heroku, so the Admin Area would be at jagathifoundation.herokuapp.com.
+
+For the Cite:
+
+@given: A few different options, each with a few cons, ranked by me. Up to you though to choose which one we want to use.
+
+1. Netlify
+@url: https://netlify.com
+@pros: Easy Deployment, No low level configuration, Good all around the world, VERY easy to deploy. DandD or CLI. Free. Cheep System.
+@cons: Only Static Hosting. No non-profit benifits. No India preference
+@should-use: VERY MUCH. 
+
+2. Interserver
+@url: https://www.interserver.net/
+@pros: Secure and Non Profit Benifits, SSD and SSL built in. Secure and Step by Step Deployment.
+@cons: Bit complex. Not new and popular. Not very Easy to deploy costs money.
+@should-use: Maybe
+
+-- Other less good options --
+
+3. Azure: Good but complex, and not for static stuff. Also costly.
+
+4. Godaddy: Unusable because only server hosting?

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_countries",
+  "info": {
+    "name": "Project Country"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "project": {
+      "via": "project_countries",
+      "model": "project"
+    }
+  }
+}

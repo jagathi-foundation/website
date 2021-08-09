@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/core-team-members",
+      "handler": "core-team-member.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/core-team-members/count",
+      "handler": "core-team-member.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/core-team-members/:id",
+      "handler": "core-team-member.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/core-team-members",
+      "handler": "core-team-member.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/core-team-members/:id",
+      "handler": "core-team-member.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/core-team-members/:id",
+      "handler": "core-team-member.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

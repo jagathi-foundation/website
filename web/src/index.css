@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "https://fonts.googleapis.com/css2?family=Poppins&display=swap";
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+@layer components {
+  .h-ft {
+    height: 490px;
+  }
+
+  .carousel .control-next.control-arrow,
+  .carousel .control-next.control-arrow:hover {
+    background-color: orange;
+  }
+
+  .carousel .control-prev.control-arrow,
+  .carousel .control-prev.control-arrow:hover {
+    background-color: orange;
+  }
+
+
+}

@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/impact",
+      "handler": "impact.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/impact",
+      "handler": "impact.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/impact",
+      "handler": "impact.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

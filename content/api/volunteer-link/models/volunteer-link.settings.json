@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "volunteer_links",
+  "info": {
+    "name": "Volunteer Link"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jagathi Foundation | Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="logo.svg" />
+  </head>
+  <body class="font-main">
+    <nav class="flex justify-between items-center py-7 px-8">
+      <div
+        class="flex items-center cursor-pointer"
+        onclick="window.location.href='./'"
+      >
+        <img src="logo.svg" alt="logo" class="w-11 h-11" />
+        <h1 class="text-3xl px-3">Jagathi Foundation</h1>
+      </div>
+      <div class="item-center hidden lg:flex">
+        <a href="./" class="px-5 text-lg cursor-pointer hover:underline"
+          >Home</a
+        >
+        <a href="about.html" class="px-5 text-lg cursor-pointer hover:underline"
+          >About</a
+        >
+        <a
+          href="projects.html"
+          class="px-5 text-lg cursor-pointer hover:underline"
+          >Projects</a
+        >
+        <a
+          href="redirecttovolunteer.html"
+          class="px-5 text-lg cursor-pointer hover:underline"
+          >Volunteer</a
+        >
+      </div>
+      <div class="block lg:hidden">
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"
+          class="w-10"
+        />
+      </div>
+    </nav>
+    <main class="container m-auto">
+      <h1 class="text-4xl text-center pt-10">Our Projects</h1>
+      <section class="lg:justify-between flex w-full my-4 items-center lg:flex-row flex-col justify-center">
+        <div class="flex space-x-5 lg:ml-16">
+          <button class="my-5 bg-yellow-500 text-white rounded px-5 py-1">
+            A-Z
+          </button>
+          <button class="my-5 bg-yellow-500 text-white rounded px-5 py-1">
+            Z-A
+          </button>
+          <button class="my-5 bg-yellow-500 text-white rounded px-5 py-1">
+            Newest First
+          </button>
+          <button class="my-5 bg-yellow-500 text-white rounded px-5 py-1">
+            Oldest First
+          </button>
+        </div>
+        <div class="flex space-x-3 lg:mr-16">
+          <select
+            name="Pillar"
+            id="pillar"
+            class="border-yellow-500 border-2 cursor-pointer py-1 px-1 bg-white"
+          >
+            <option value="Education">Education</option>
+            <option value="Enviroment">Enviroment</option>
+            <option value="Health & Welfare">Health & Welfare</option>
+          </select>
+          <select
+            name="Country"
+            id="country"
+            class="border-yellow-500 border-2 cursor-pointer py-1 px-1 bg-white"
+          >
+            <option value="All">All Countries</option>
+            <option value="India">India</option>
+            <option value="US">US</option>
+          </select>
+        </div>
+      </section>
+      <div
+        class="
+          grid grid-rows-1 grid-cols-1
+          gap-y-10
+          xl:gap-y-10
+          items-center
+          justify-center
+          m-auto
+          place-items-center
+          md:grid-cols-2 md:grid-rows-2
+          lg:grid-cols-3 lg:grid-rows-2
+          max-w-7xl
+          my-10
+          projects
+        "
+      >
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="baseproject.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">Hygine Distribution.</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="baseproject.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">Notebook Distr.</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="baseproject.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">Bag Distribution</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="baseproject.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">Health Checkup</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="baseproject.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">Baking Classes</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="baseproject.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">COVID Awareness</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="baseproject.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">Serve with Heart</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="baseproject.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">Green Diwali</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+        >
+          <img
+            src="baseproject.png"
+            alt="W"
+            class="rounded-t-md w-full object-fit object-center"
+          />
+          <h1 class="text-center pt-4 text-2xl">Children’s Day</h1>
+          <p class="text-center pt-2 pb-4 px-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+      </div>
+      <div class="py-2">
+        <nav class="block">
+          <ul class="flex pl-0 rounded list-none flex-wrap justify-center">
+            <li>
+              <a
+                href="#pablo"
+                class="
+                  first:ml-0
+                  text-xs
+                  font-semibold
+                  flex
+                  w-8
+                  h-8
+                  mx-1
+                  p-0
+                  rounded-full
+                  items-center
+                  justify-center
+                  leading-tight
+                  relative
+                  border border-solid border-yellow-500
+                  text-yellow-500
+                "
+              >
+                <i class="fas fa-chevron-left -ml-px"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pablo"
+                class="
+                  first:ml-0
+                  text-xs
+                  font-semibold
+                  flex
+                  w-8
+                  h-8
+                  mx-1
+                  p-0
+                  rounded-full
+                  items-center
+                  justify-center
+                  leading-tight
+                  relative
+                  border border-solid border-yellow-500
+                  text-white
+                  bg-yellow-500
+                "
+              >
+                1
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pablo"
+                class="
+                  first:ml-0
+                  text-xs
+                  font-semibold
+                  flex
+                  w-8
+                  h-8
+                  mx-1
+                  p-0
+                  rounded-full
+                  items-center
+                  justify-center
+                  leading-tight
+                  relative
+                  border border-solid border-yellow-500
+                  text-yellow-500
+                "
+              >
+                2
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pablo"
+                class="
+                  first:ml-0
+                  text-xs
+                  font-semibold
+                  flex
+                  w-8
+                  h-8
+                  mx-1
+                  p-0
+                  rounded-full
+                  items-center
+                  justify-center
+                  leading-tight
+                  relative
+                  border border-solid border-yellow-500
+                  bg-white
+                  text-yellow-500
+                "
+              >
+                3
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pablo"
+                class="
+                  first:ml-0
+                  text-xs
+                  font-semibold
+                  flex
+                  w-8
+                  h-8
+                  mx-1
+                  p-0
+                  rounded-full
+                  items-center
+                  justify-center
+                  leading-tight
+                  relative
+                  border border-solid border-yellow-500
+                  bg-white
+                  text-yellow-500
+                "
+              >
+                4
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pablo"
+                class="
+                  first:ml-0
+                  text-xs
+                  font-semibold
+                  flex
+                  w-8
+                  h-8
+                  mx-1
+                  p-0
+                  rounded-full
+                  items-center
+                  justify-center
+                  leading-tight
+                  relative
+                  border border-solid border-yellow-500
+                  bg-white
+                  text-yellow-500
+                "
+              >
+                5
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pablo"
+                class="
+                  first:ml-0
+                  text-xs
+                  font-semibold
+                  flex
+                  w-8
+                  h-8
+                  mx-1
+                  p-0
+                  rounded-full
+                  items-center
+                  justify-center
+                  leading-tight
+                  relative
+                  border border-solid border-yellow-500
+                  bg-white
+                  text-yellow-500
+                "
+              >
+                <i class="fas fa-chevron-right -mr-px"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+    <br /><br />
+    <footer class="w-full bg-black text-center text-white">
+      <div class="flex justify-center lg:py-5 lg:flex-row flex-col pt-2">
+        <div
+          class="
+            text-center
+            px-5
+            items-center
+            justify-center
+            m-auto
+            lg:m-0 lg:py-0
+            py-4
+          "
+        >
+          <h1>Socials</h1>
+          <div class="flex mt-2">
+            <img src="twit.png" alt="tw" class="w-12 h-8 lg:mx-2 mx-1" />
+            <span
+              class="iconify iconify text-3xl lg:mx-2 w-12 h-8 mx-1"
+              data-inline="false"
+              data-icon="logos:facebook"
+            ></span
+            ><span
+              class="iconify text-3xl lg:mx-2 w-12 h-8 mx-1"
+              data-inline="false"
+              data-icon="logos:youtube-icon"
+            ></span>
+            <img
+              src="logos_instagram-icon.png"
+              alt="insta"
+              class="w-9 h-9 lg:mx-2 mx-1"
+            />
+          </div>
+        </div>
+        <div class="text-center lg:px-5 lg:m-0 m-auto py-4 lg:py-0">
+          <h1>Get In Touch</h1>
+          <h3 class="md:flex">
+            <span class="px-3">📧</span> jagathifoundation@gmail.com
+          </h3>
+          <h3 class="lg:flex"><span class="px-3">🏠</span>Hyderbad, India</h3>
+        </div>
+        <div class="text-center px-5 lg:py-0 py-4">
+          <h1>Donate</h1>
+          <p>To donate, visit bankadress.com/jagathifoundation</p>
+        </div>
+      </div>
+      <div class="border-t-2 border-yellow-600 w-1/2 m-auto py-3 lg:pb-3 pb-6">
+        © All Rights Reserved by Jagathi Foundation
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/7b9611f913.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+  </body>
+</html>

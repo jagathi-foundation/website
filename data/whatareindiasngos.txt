@@ -1,0 +1,49 @@
+Job: Look and examine different NGO's in India for website design and data patterns.
+Pages we will be "replicating": Home, Projects, About Us
+
+Study 1: http://100smiles.org/#/home
+Built With: Angular
+Format:
+Home:
+1. Nav at the top, with logo and links, hamburger on small screens.
+2. Hero section, with images rotating. Donate Us button for people to easily find the donation button.
+3. Projects Grid: 6-9 of top projects and button for /projects, for all projects
+4. Testamonials: Few people saying good things about the np.
+5. Footer: Links, Contact Information, Copyright, Credits
+Projects:
+1. Projects title
+2. Grid of all projects with pagination.
+3. Footer
+About: 
+1. About title
+2. Image with project mission
+3. Founders, and team.
+Notes: Simple, not over complicated and two color theme. Fully Resposive
+
+Study 2: https://www.careindia.org/
+Not known what built with
+Format:
+Home: 
+1. Nav with logo and links and humburger.
+2. Hero with name and buttons.
+3. Impact data.
+4. Testamonials.
+5. News, blogs, events, resources
+6. Join.
+7. Footer with contact.
+About:
+Mulitiple tabs with people, founding and more.
+Our Works:
+Tabs by topic. 
+Tabs and achivements.
+
+Study 3: Youth For Seva
+Home:
+Logo + Links and User Menu (Allow for logins)
+Hero: With many images rotating
+Focus area: Logo's and youtube, Updates with posts.
+Testmonials, Vouluteers, Data/States
+Footer with contact
+About:
+Team, Phillosphy Mission
+

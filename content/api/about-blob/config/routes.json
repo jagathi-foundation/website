@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/about-blob",
+      "handler": "about-blob.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/about-blob",
+      "handler": "about-blob.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/about-blob",
+      "handler": "about-blob.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

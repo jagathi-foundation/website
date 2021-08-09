@@ -1,0 +1,36 @@
+Two Configurations Currently Proposed:
+
+1. Wordpress
+
+PHP with frontend and backend managed.
+
+PROS:
+- Easily managed.
+- Easy to mantain.
+- Uses PHP? Could be a con also.
+- Admin UI.
+- Actually add HTML through CMS.
+- Hosting planned.
+
+CONS: 
+- PHP is a horrible language.
+- PHP is slow.
+- I do not know PHP or Wordpress well.
+- Old solution, much better tech exists today.
+
+2. React + CMS
+
+React frontend with Headless CMS to manage content.
+
+PROS:
+- Best of both worlds.
+- Rich SPA with React.
+- Maintained Content with CMS.
+- Fast size and bundle.
+- Modern technology (Javascript is the way)
+- Rich content with the Headless CMS.
+- Amazing Development Experience with JSX.
+
+CONS:
+- Not a full CMS.
+- Cant add HTMl and not SSRed.

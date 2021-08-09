@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/about-full",
+      "handler": "about-full.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/about-full",
+      "handler": "about-full.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/about-full",
+      "handler": "about-full.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

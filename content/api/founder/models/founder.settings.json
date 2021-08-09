@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "founders",
+  "info": {
+    "name": "Founder"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

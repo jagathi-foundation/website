@@ -1,0 +1,39 @@
+More detailed comparision.
+
+1. React + CMS
+
+React:
+@Cost:
+Development: Free, create one as `npx create-react-app`, and free to develop locally.
+------------------------------------------------------------------------------------
+Hosting: Since React Compiles to HTML, many of the free hosting options will be fine for the actually React App Hosting (Such as Netlify). $19 per month is the paid tier.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@Maintanibility: When Combined with the Headless CMS, the maintainibility will be extremly simple, wihout code needing to be touched. The only case for this is a new page.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@Product: The development experience is simple for any new devs. The speed of a React SPA is top tier. The build is fast.
+
+Headless CMS
+@Options: Strapi and Sanity.
+---------------------------
+@Cost:
+Strapi: Free to develop, but since you need to self-host, another service is needed. Free tier, but premium would be around $20 a month. And Strapi Premium (More space) is $29.
+Sanity: Free tier with easy hosting and many useful features. Paid tier not needed AT ALL, but would be $99 a month. Both do not affect hosting, but amount of content.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@Maintanibility: When new content is being added, the maintanibility is incredibily simple, with the ADMIN UI. New forms of data will require updating the schema, but this is straightforward for any devs. This applies for both Sanity and Strap.
+--Note-- Strapi requires self hosting, so any new schema changes will require a more complex deploy process. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@Product: A Headless CMS allows you add content to your site through an ADMIN UI, without needing the frontend to be based on the backend. Data is fetched through Graph QL or Rest. New forms of data is manged through schemas and the ADMIN UI can be customized through Code (Usually Javascript).
+Strapi & Sanity: Both allow you to add Images, Text, Tags and More that can then be used dynamicly in the Admin UI. Both allow for major customization.
+
+
+2. Wordpress
+
+@Cost:
+Development: Free, though complicated since PHP and Mammp and More need to be installed for development.
+Hosting: $8 a month, but that comes without SEO and premium features. A PRO version would be $25. However this is for the website builder which is not 100% customizable. We would need to create a custom theme for this site, which might require more up-front costs.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@Maintaibility: On the surface, for allready built pages and content, Wordpress is simple and easy to use. However due to our customization, we would need to create a custom theme. New pages would require complicated PHP code. Though with the builder this would not be a problem, we would have to sacrifice some of our customization wants.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@Product: Wordpress is a full CMS and has a suite of Products. Rich content managment for blogs and websites. Domains, and self hosting solutions. SEO and Ecommerce solutions. However, Wordpress IS an old technology, and some options could be better. Though, Wordpress is quite convinient. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--CON: I dont know wordpress WELL
