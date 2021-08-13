@@ -11,45 +11,9 @@ import {
   PillarsListType,
   AboutFullContentType,
 } from "./types/AboutTypes";
-import {
-  ProjectTopicTypeList,
-} from "./types/HomeTypes";
 
 // Mock Data for Dynamic Site
 export const NavLinks: NavLinksType = [];
-
-export const ProjectTopicsContent: ProjectTopicTypeList = [
-  {
-    desc: "Educating Women on the topics they need to lead a steady life.",
-    name: "Women Edu",
-    img: "images/womenedu.png",
-  },
-  {
-    desc: "Helping women focus and move into a working life.",
-    name: "Women Empowering",
-    img: "images/womenemp.png",
-  },
-  {
-    desc: "Enforcing that children lead a academic path instead of working.",
-    name: "Kids Health and Edu",
-    img: "images/kidhealth.png",
-  },
-  {
-    desc: "Working towards safety regarding women related health issues.",
-    name: "Womens Health",
-    img: "images/womenhealth.png",
-  },
-  {
-    desc: "Spreading awarness related to protecing the enviroment.",
-    name: "Enviroment",
-    img: "images/enviroment.png",
-  },
-  {
-    desc: "Helping subdue the effects of COVID and other fields.",
-    name: "Covid/Other",
-    img: "images/covidother.png",
-  },
-];
 
 export const AboutFull: AboutFullContentType = {
   img: "images/jagathistreatch.jpg",

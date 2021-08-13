@@ -12,4 +12,8 @@ export interface SocialLinksType {
 
 export type BankAddressType = string;
 
-export type NavLinksType =  Array<{name: string, url: string}>
+export type NavLinksType = Array<{
+  name: string;
+  url: string;
+  externalLink: boolean;
+}>;

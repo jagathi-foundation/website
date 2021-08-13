@@ -1,7 +1,7 @@
 import React from 'react';
 //Imports for the Router.
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom"
-//Import for the page componenets.
+//Import for the page components.
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';

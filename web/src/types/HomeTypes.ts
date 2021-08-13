@@ -1,13 +1,13 @@
 export interface ProjectTopicType {
   name: string;
-  desc: string;
-  img: string;
+  description: string;
+  img: any;
 }
 
 export type ProjectTopicTypeList = Array<{
   name: string;
-  desc: string;
-  img: string;
+  description: string;
+  image: any;
 }>;
 
 export interface ImpactDataType {
@@ -30,3 +30,4 @@ export type SlideItemTypeList = Array<{
   name: string;
   image: any;
 }>;
+ 

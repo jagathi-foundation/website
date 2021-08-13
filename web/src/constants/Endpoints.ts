@@ -6,7 +6,9 @@ enum NameToUrl {
   AboutBlob = "about-blob",
   Impact = "impact",
   ProjectTopics = "project-topics",
-  FooterInfo = "footer",
+  FooterInfo = "footer-information",
+  AboutFull = 'about-full',
+  Pillars = 'pillars'
 }
 
 export const NavLinksURL = `${CMSURL}${NameToUrl.NavLinks}`;
@@ -15,5 +17,6 @@ export const AboutBlobURL = `${CMSURL}${NameToUrl.AboutBlob}`;
 export const ImpactURL = `${CMSURL}${NameToUrl.Impact}`;
 export const ProjectTopicsURL = `${CMSURL}${NameToUrl.ProjectTopics}`
 export const FooterURL = `${CMSURL}${NameToUrl.FooterInfo}`
-
+export const AboutFullURL = `${CMSURL}${NameToUrl.AboutFull}`;
+export const PillarsURL = `${CMSURL}${NameToUrl.Pillars}`
 

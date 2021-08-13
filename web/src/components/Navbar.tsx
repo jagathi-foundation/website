@@ -17,6 +17,20 @@ const Navbar: React.FC<Props> = ({ navLinks }) => {
       </Link>
       <div className="item-center hidden lg:flex">
         {navLinks.map((link, key) => {
+          if (link.externalLink) {
+            return (
+              <a
+                href={link.url}
+                key={key}
+                className="px-5 text-lg cursor-pointer hover:underline"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.name}
+              </a>
+            );
+          }
+
           return (
             <Link
               to={link.url}

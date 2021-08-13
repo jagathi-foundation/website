@@ -7,42 +7,79 @@ import Impact from "../components/Impact";
 import ProjectTopics from "../components/ProjectTopics";
 import Footer from "../components/Footer";
 import Spinner from "../components/Loader";
-import {
-  ProjectTopicsContent,
-  SocialLinksContent,
-  ContactInfoContent,
-  DonateLink,
-} from "../mockdata";
-// Content Getters
+
+// Content Getter
 import getHomeContent from "../utils/GetHomeContent";
 //Types
-import { NavLinksType } from "../types/NavFooterTypes";
+import {
+  NavLinksType,
+  SocialLinksType,
+  ContactInformationType,
+  BankAddressType,
+} from "../types/NavFooterTypes";
 import {
   SlideItemTypeList,
   AboutBlobContentType,
   ImpactDataType,
+  ProjectTopicTypeList,
 } from "../types/HomeTypes";
 
 const Home: React.FC = () => {
+  //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
   const [carouselItems, setCarouselItems] = useState<SlideItemTypeList | null>(
     null
   );
   const [aboutBlob, setAboutBlob] = useState<AboutBlobContentType | null>(null);
   const [impact, setImpact] = useState<ImpactDataType | null>(null);
+  const [projectTopics, setProjectTopics] =
+    useState<ProjectTopicTypeList | null>(null);
 
+  const [footerData, setFooterData] = useState<{
+    socials: SocialLinksType;
+    contact: ContactInformationType;
+    bank: BankAddressType;
+  } | null>(null);
+
+  //Get Data
   useEffect(() => {
     (async () => {
-      const [navlinkData, carouselData, aboutBlobData, impactData] = await getHomeContent();
+      const [
+        navlinkData,
+        carouselData,
+        aboutBlobData,
+        impactData,
+        projectTopicsData,
+        footerData,
+      ] = await getHomeContent();
 
       setNavLinks(navlinkData as NavLinksType);
       setCarouselItems(carouselData as SlideItemTypeList);
       setAboutBlob(aboutBlobData as AboutBlobContentType);
-      setImpact(impactData as ImpactDataType)
+      setImpact(impactData as ImpactDataType);
+      setProjectTopics(projectTopicsData as ProjectTopicTypeList);
+      setFooterData({
+        bank: footerData.bankaddressURL,
+        contact: { email: footerData.email, location: footerData.location },
+        socials: {
+          twitter: footerData.twitterURL,
+          facebook: footerData.facebookURL,
+          instagram: footerData.instagramURL,
+          youtube: footerData.youtubeURL,
+        },
+      });
     })();
   }, []);
 
-  if (!navLinks || !carouselItems || !aboutBlob) {
+  // Loader
+  if (
+    !navLinks ||
+    !carouselItems ||
+    !aboutBlob ||
+    !impact ||
+    !projectTopics ||
+    !footerData
+  ) {
     return <Spinner />;
   }
 
@@ -51,12 +88,12 @@ const Home: React.FC = () => {
       <Navbar navLinks={navLinks} />
       <Carousel slides={carouselItems} />
       <AboutHome aboutBlob={aboutBlob} />
-      <Impact impact={{ servedpeople: 1, volunteers: 2, workhours: 3 }} />
-      <ProjectTopics projectTopics={ProjectTopicsContent} />
+      <Impact impact={impact} />
+      <ProjectTopics projectTopics={projectTopics} />
       <Footer
-        socialLinks={SocialLinksContent}
-        contactInfo={ContactInfoContent}
-        donateLink={DonateLink}
+        socialLinks={footerData.socials}
+        contactInfo={footerData.contact}
+        donateLink={footerData.bank}
       />
     </>
   );

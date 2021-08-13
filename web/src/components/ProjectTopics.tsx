@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ProjectTopicTypeList } from "../types/HomeTypes";
+import cmsImg from "../utils/CMSImg";
 
 interface Props {
   projectTopics: ProjectTopicTypeList;
@@ -9,7 +10,7 @@ interface Props {
 const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
   return (
     <>
-      <h1 className="text-center pt-12 text-3xl px-6">
+      <h1 className="text-center pt-11 text-3xl px-6">
         Current Project Topics
       </h1>
       <div
@@ -29,7 +30,7 @@ const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
       >
         {projectTopics.map((topic, key) => {
           return (
-            <Link to={`/projects?topic`} key={key}>
+            <Link to={`/projects?topic=${encodeURI(topic.name)}`} key={key}>
               <div
                 className={`
                   bg-gray-300
@@ -41,12 +42,14 @@ const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
                 `}
               >
                 <img
-                  src={topic.img}
+                  src={cmsImg(topic.image)}
                   alt={topic.name}
                   className="rounded-t-md w-full object-fit object-cente"
                 />
                 <h1 className="text-center pt-4 text-2xl px-3">{topic.name}</h1>
-                <p className="text-center pt-2 pb-4 px-3">{topic.desc}</p>
+                <p className="text-center pt-2 pb-4 px-3">
+                  {topic.description}
+                </p>
               </div>
             </Link>
           );
@@ -54,7 +57,7 @@ const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
       </div>
       <div className="w-full text-center">
         <Link to="/projects">
-          <button className="mb-10 bg-yellow-500 text-white rounded px-5 py-1 text-xl">
+          <button className="mb-10 bg-yellow-500 text-white rounded px-5 py-2 text-xl">
             See All Projects
           </button>
         </Link>
