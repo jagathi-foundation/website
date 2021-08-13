@@ -4,6 +4,7 @@ import { PillarsListType } from "../types/AboutTypes";
 interface Props {
   pillars: PillarsListType;
 }
+
 //Might change from 3 to 4
 const Pillars: React.FC<Props> = ({ pillars }) => {
   return (
@@ -16,19 +17,15 @@ const Pillars: React.FC<Props> = ({ pillars }) => {
             justify-between
             items-center
             mx-auto
-            max-w-7xl
+            max-w-6xl
             lg:flex-row
             flex-col
+            text-center
           "
         >
           {pillars.map((pillar, key) => {
             return (
-              <div
-                className={`pb-5 lg:pt-5 pt-3 ${
-                  key === 1 ? "lg:pl-16" : "px-5"
-                }`}
-                key={key}
-              >
+              <div className={`pb-5 lg:pt-5 pt-3`} key={key}>
                 <span
                   className="iconify text-center w-10 m-auto my-3 text-5xl"
                   data-icon="mdi:pillar"

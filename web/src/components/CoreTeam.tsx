@@ -1,5 +1,6 @@
 import React from "react";
 import { FounderType, CoreTeamListType } from "../types/AboutTypes";
+import cmsImg from "../utils/CMSImg";
 
 interface Props {
   founder: FounderType;
@@ -26,7 +27,7 @@ const CoreTeam: React.FC<Props> = ({ founder, coreTeam }) => {
         "
       >
         <img
-          src={founder.img}
+          src={cmsImg(founder.image)}
           alt="Founder"
           className="
             max-w-md
@@ -39,7 +40,7 @@ const CoreTeam: React.FC<Props> = ({ founder, coreTeam }) => {
         />
         <div className="px-8 text-xl pt-11 lg:py-0">
           <h1 className="text-3xl">{founder.name} - Founder</h1>
-          <p className="pt-5">{founder.desc}</p>
+          <p className="pt-5">{founder.description}</p>
         </div>
       </div>
       <br />

@@ -11,17 +11,16 @@ export interface CoreTeamPerson {
 }
 
 export interface FounderType {
-  img: string;
+  image: any;
   name: string;
-  desc: string;
+  description: string;
 }
 
 export type PillarsListType = string[];
 
 export interface AboutFullContentType {
-  img: string;
-  descs: Array<{
-    name: string;
-    desc: string;
-  }>;
+  coverimg: any;
+  ourvision: string;
+  foundingstory: string;
+  whatwedo: string;
 }

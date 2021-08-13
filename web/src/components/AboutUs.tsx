@@ -1,5 +1,6 @@
 import React from "react";
 import { AboutFullContentType } from "../types/AboutTypes";
+import cmsImg from "../utils/CMSImg";
 
 interface Props {
   aboutFullContent: AboutFullContentType;
@@ -12,10 +13,10 @@ const AboutUs: React.FC<Props> = ({ aboutFullContent }) => {
         The Jagathi Foundation
       </h1>
       <img
-        src={aboutFullContent.img}
+        src={cmsImg(aboutFullContent.coverimg)}
         alt="Company"
         className="
-          w-10/12
+          w-8/12
           h-56
           object-cover object-center
           mx-auto
@@ -23,7 +24,6 @@ const AboutUs: React.FC<Props> = ({ aboutFullContent }) => {
           rounded-md
           shadow-md
         "
-        
       />
       <div
         className="
@@ -31,23 +31,25 @@ const AboutUs: React.FC<Props> = ({ aboutFullContent }) => {
           justify-between
           mx-auto
           my-10
-          xl:w-10/12
+          xl:w-8/12
           w-3/4
           text-center
           lg:flex-row
           flex-col
         "
       >
-        {aboutFullContent.descs.map((contentItem, key) => {
-          return (
-            <div key={key}>
-              <h1 className="text-3xl">{contentItem.name}</h1>
-              <p className="py-4 text-lg px-1">
-                {contentItem.desc}
-              </p>
-            </div>
-          );
-        })} 
+        <div>
+          <h1 className="text-3xl">Our Vision</h1>
+          <p className="py-4 text-lg px-1">{aboutFullContent.ourvision}</p>
+        </div>
+        <div>
+          <h1 className="text-3xl">Founding Story</h1>
+          <p className="py-4 text-lg px-1">{aboutFullContent.foundingstory}</p>
+        </div>
+        <div>
+          <h1 className="text-3xl">What We Do</h1>
+          <p className="py-4 text-lg px-1">{aboutFullContent.whatwedo}</p>
+        </div>
       </div>
     </>
   );

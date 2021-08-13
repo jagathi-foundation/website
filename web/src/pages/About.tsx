@@ -5,15 +5,17 @@ import Navbar from "../components/Navbar";
 import AboutUs from "../components/AboutUs";
 import Pillars from "../components/Pillars";
 import CoreTeam from "../components/CoreTeam";
-import {
-  AboutFull,
-  PillarsList,
-  CoreTeamContent,
-  Founder,
-} from "../mockdata";
+import { CoreTeamContent } from "../mockdata";
 //Content Getter
 import getAboutContent from "../utils/GetAboutContent";
+//Loader
 import Spinner from "../components/Loader";
+//Types
+import {
+  AboutFullContentType,
+  PillarsListType,
+  FounderType,
+} from "../types/AboutTypes";
 import {
   NavLinksType,
   SocialLinksType,
@@ -24,6 +26,9 @@ import {
 const About: React.FC = () => {
   //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
+  const [aboutFull, setAboutFull] = useState<AboutFullContentType | null>(null);
+  const [pillars, setPillars] = useState<PillarsListType | null>(null);
+  const [founder, setFounder] = useState<FounderType | null>(null);
   const [footerData, setFooterData] = useState<{
     socials: SocialLinksType;
     contact: ContactInformationType;
@@ -33,10 +38,15 @@ const About: React.FC = () => {
   //Get Content
   useEffect(() => {
     (async () => {
-      const [navlinkData, aboutFullData, pillarsData, footerData] =
+      const [navlinkData, aboutFullData, pillarsData, founderData, footerData] =
         await getAboutContent();
 
       setNavLinks(navlinkData as NavLinksType);
+      setAboutFull(aboutFullData as AboutFullContentType);
+      setPillars(
+        pillarsData.map((pillar: any) => pillar.name) as PillarsListType
+      );
+      setFounder(founderData as FounderType);
       setFooterData({
         bank: footerData.bankaddressURL,
         contact: { email: footerData.email, location: footerData.location },
@@ -51,16 +61,16 @@ const About: React.FC = () => {
   }, []);
 
   // Loader
-  if (!navLinks || !footerData) {
+  if (!navLinks || !footerData || !aboutFull || !pillars || !founder) {
     return <Spinner />;
   }
 
   return (
     <>
       <Navbar navLinks={navLinks} />
-      <AboutUs aboutFullContent={AboutFull} />
-      <Pillars pillars={PillarsList} />
-      <CoreTeam coreTeam={CoreTeamContent} founder={Founder} />
+      <AboutUs aboutFullContent={aboutFull} />
+      <Pillars pillars={pillars} />
+      <CoreTeam coreTeam={CoreTeamContent} founder={founder} />
       <Footer
         socialLinks={footerData.socials}
         contactInfo={footerData.contact}

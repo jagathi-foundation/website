@@ -8,7 +8,8 @@ enum NameToUrl {
   ProjectTopics = "project-topics",
   FooterInfo = "footer-information",
   AboutFull = 'about-full',
-  Pillars = 'pillars'
+  Pillars = 'pillars',
+  Founder = 'founder'
 }
 
 export const NavLinksURL = `${CMSURL}${NameToUrl.NavLinks}`;
@@ -19,4 +20,4 @@ export const ProjectTopicsURL = `${CMSURL}${NameToUrl.ProjectTopics}`
 export const FooterURL = `${CMSURL}${NameToUrl.FooterInfo}`
 export const AboutFullURL = `${CMSURL}${NameToUrl.AboutFull}`;
 export const PillarsURL = `${CMSURL}${NameToUrl.Pillars}`
-
+export const FounderURL  = `${CMSURL}${NameToUrl.Founder}`

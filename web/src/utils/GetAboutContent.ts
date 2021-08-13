@@ -1,4 +1,5 @@
 import axios from "axios";
+import { FounderURL } from "../constants/Endpoints";
 import {
   AboutFullURL,
   NavLinksURL,
@@ -7,18 +8,24 @@ import {
 } from "../constants/Endpoints";
 
 export default async function getAboutContent() {
-  const requestURLS = [NavLinksURL, AboutFullURL, PillarsURL, FooterURL];
+  const requestURLS = [
+    NavLinksURL,
+    AboutFullURL,
+    PillarsURL,
+    FounderURL,
+    FooterURL,
+  ];
 
   const requests = requestURLS.map((url) => axios.get(url));
 
-  const [navReq, aboutFullReq, pillarsReq, footerReq] = await Promise.all(
-    requests
-  );
+  const [navReq, aboutFullReq, pillarsReq, founderReq, footerReq] =
+    await Promise.all(requests);
 
   const data = [
     navReq.data,
     aboutFullReq.data,
     pillarsReq.data,
+    founderReq.data,
     footerReq.data,
   ];
 
