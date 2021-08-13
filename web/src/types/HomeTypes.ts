@@ -11,22 +11,22 @@ export type ProjectTopicTypeList = Array<{
 }>;
 
 export interface ImpactDataType {
-  people: number;
+  servedpeople: number;
   volunteers: number;
   workhours: number;
 }
 
 export interface AboutBlobContentType {
-  img: string;
-  desc: string;
+  image: any;
+  description: string;
 }
 
 export interface SlideItemType {
-  src: string;
-  alt: string;
+  name: string;
+  image: any;
 }
 
 export type SlideItemTypeList = Array<{
-  src: string;
-  alt: string;
+  name: string;
+  image: any;
 }>;

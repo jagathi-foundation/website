@@ -1,6 +1,8 @@
 import React from "react";
 import { Carousel as CarouselR } from "react-responsive-carousel";
 import { SlideItemTypeList } from "../types/HomeTypes";
+import cmsImg from '../utils/CMSImg';
+
 
 interface Props {
   slides: SlideItemTypeList;
@@ -19,13 +21,14 @@ const Carousel: React.FC<Props> = ({ slides }) => {
         showStatus={false}
       >
         {slides.map((slide, key) => {
+
           return (
             <div key={key}>
               <img
-                src={slide.src}
+                src={cmsImg(slide.image)}
                 style={{ height: "490px" }}
                 className="object-contain"
-                alt={slide.alt}
+                alt={slide.name}
               />
             </div>
           );

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { NavLinksType } from '../types/NavFooterTypes';
+import { NavLinksType } from "../types/NavFooterTypes";
 
 interface Props {
-  navLinks: NavLinksType
+  navLinks: NavLinksType;
 }
 
-const Navbar: React.FC<Props> = ({navLinks}) => {
+const Navbar: React.FC<Props> = ({ navLinks }) => {
   return (
     <nav className="flex justify-between items-center py-7 px-8">
       <Link to="/">
@@ -17,7 +17,15 @@ const Navbar: React.FC<Props> = ({navLinks}) => {
       </Link>
       <div className="item-center hidden lg:flex">
         {navLinks.map((link, key) => {
-          return <Link to={`/${link === "Home" ? '' : link.toLowerCase()}`} key={key} className="px-5 text-lg cursor-pointer hover:underline">{link}</Link>
+          return (
+            <Link
+              to={link.url}
+              key={key}
+              className="px-5 text-lg cursor-pointer hover:underline"
+            >
+              {link.name}
+            </Link>
+          );
         })}
       </div>
       <div className="block lg:hidden">

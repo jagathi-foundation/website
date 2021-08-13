@@ -13,35 +13,10 @@ import {
 } from "./types/AboutTypes";
 import {
   ProjectTopicTypeList,
-  ImpactDataType,
-  AboutBlobContentType,
-  SlideItemTypeList,
 } from "./types/HomeTypes";
 
 // Mock Data for Dynamic Site
-export const NavLinks: NavLinksType = [
-  "Home",
-  "About",
-  "Projects",
-  "Volunteer",
-];
-
-export const Slides: SlideItemTypeList = [
-  { src: "images/banner01.png", alt: "Foundation" },
-  { src: "images/banner02.jpg", alt: "Volunteers" },
-  { src: "images/banner03.jpg", alt: "Serving Food" },
-];
-
-export const AboutBlob: AboutBlobContentType = {
-  desc: "We are a nonprofit based in India that hopes to transform the lives of the deprived/most deserved poor comunitites by providing quality education, health, hygine and gender equality.",
-  img: "images/jagathi.png",
-};
-
-export const ImpactContent: ImpactDataType = {
-  people: 510,
-  volunteers: 150,
-  workhours: 950,
-};
+export const NavLinks: NavLinksType = [];
 
 export const ProjectTopicsContent: ProjectTopicTypeList = [
   {
@@ -220,4 +195,3 @@ export const ContactInfoContent: ContactInformationType = {
 };
 
 export const DonateLink: BankAddressType = "bankaddress.jagathifoundation.org";
-

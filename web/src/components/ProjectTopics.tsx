@@ -29,7 +29,7 @@ const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
       >
         {projectTopics.map((topic, key) => {
           return (
-            <Link to={`/projects?topic`}>
+            <Link to={`/projects?topic`} key={key}>
               <div
                 className={`
                   bg-gray-300
@@ -39,7 +39,6 @@ const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
                   max-w-xs
                   ${key === projectTopics.length - 1 && "xl:my-5 my-0"}
                 `}
-                key={key}
               >
                 <img
                   src={topic.img}
