@@ -1,5 +1,6 @@
 import { CMSURL } from "./CMSURL";
 
+//An Enum To Map Names of Schemas to their Rest Enpoints.
 enum NameToUrl {
   NavLinks = "navigation-links",
   CarouselItems = "carousel-items",
@@ -11,8 +12,11 @@ enum NameToUrl {
   Pillars = "pillars",
   Founder = "founder",
   CoreTeam = "core-team-members",
+  ProjectCountries = "project-countries",
+  Projects = "projects"
 }
 
+//Export the rest endpoint for each schema.
 export const NavLinksURL = `${CMSURL}${NameToUrl.NavLinks}`;
 export const CarouselURL = `${CMSURL}${NameToUrl.CarouselItems}`;
 export const AboutBlobURL = `${CMSURL}${NameToUrl.AboutBlob}`;
@@ -23,3 +27,5 @@ export const AboutFullURL = `${CMSURL}${NameToUrl.AboutFull}`;
 export const PillarsURL = `${CMSURL}${NameToUrl.Pillars}`;
 export const FounderURL = `${CMSURL}${NameToUrl.Founder}`;
 export const CoreTeamURL = `${CMSURL}${NameToUrl.CoreTeam}`;
+export const ProjectCountriesURL = `${CMSURL}${NameToUrl.ProjectCountries}`
+export const ProjectsURL = `${CMSURL}${NameToUrl.Projects}`

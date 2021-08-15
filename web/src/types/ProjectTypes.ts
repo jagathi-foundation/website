@@ -1,19 +1,12 @@
-export type ProjectsType = Array<{
-  img: string;
-  desc: string;
-  name: string;
-  pillars: string[];
-  countries: string[];
-}>;
-
 export interface Project {
-  img: string;
-  desc: string;
+  image: any;
+  description: string;
   name: string;
   pillars: string[];
-  countries: string[];
+  project_countries: string[];
+  projectstart: string;
 }
 
+export type ProjectsType = Project[];
 
-export type CountriesListType = string[]
-
+export type CountriesListType = string[];

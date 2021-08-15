@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "projects",
   "info": {
-    "name": "Project"
+    "name": "Project",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -36,6 +37,9 @@
     "project_countries": {
       "collection": "project-country",
       "via": "project"
+    },
+    "projectstart": {
+      "type": "date"
     }
   }
 }

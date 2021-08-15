@@ -5,10 +5,9 @@ import Navbar from "../components/Navbar";
 import ProjectList from "../components/ProjectList";
 import ProjectsWidget from "../components/ProjectsWidget";
 import Spinner from "../components/Loader";
+import Paginator from "../components/Paginator";
 //Content Getter
 import getProjectsContent from "../utils/GetProjectsContent";
-import { ProjectsContent } from "../mockdata";
-import { CountriesContent } from "../mockdata";
 //Types
 import {
   NavLinksType,
@@ -16,10 +15,15 @@ import {
   ContactInformationType,
   BankAddressType,
 } from "../types/NavFooterTypes";
+import { PillarsListType } from "../types/AboutTypes";
+import { CountriesListType } from "../types/ProjectTypes";
 
 const Projects: React.FC = () => {
   //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
+  const [pillars, setPillars] = useState<PillarsListType | null>(null);
+  const [projectCountries, setProjectCountries] =
+    useState<CountriesListType | null>(null);
   const [footersData, setFooterData] = useState<{
     socials: SocialLinksType;
     contact: ContactInformationType;
@@ -29,9 +33,18 @@ const Projects: React.FC = () => {
   //Get Content
   useEffect(() => {
     (async () => {
-      const [navlinkData, footerData] = await getProjectsContent();
+      const [navlinkData, pillarsData, projectCountriesData, footerData] =
+        await getProjectsContent();
 
       setNavLinks(navlinkData as NavLinksType);
+      setPillars(
+        pillarsData.map((pillar: any) => pillar.name) as PillarsListType
+      );
+      setProjectCountries(
+        projectCountriesData.map(
+          (country: any) => country.name
+        ) as CountriesListType
+      );
       setFooterData({
         bank: footerData.bankaddressURL,
         contact: { email: footerData.email, location: footerData.location },
@@ -45,7 +58,7 @@ const Projects: React.FC = () => {
     })();
   }, []);
 
-  if (!navLinks || !footersData) {
+  if (!navLinks || !footersData || !pillars || !projectCountries) {
     return <Spinner />;
   }
 
@@ -54,8 +67,9 @@ const Projects: React.FC = () => {
       <Navbar navLinks={navLinks} page="Projects" />
       <main className="container m-auto">
         <h1 className="text-4xl text-center pt-10">Our Projects</h1>
-        <ProjectsWidget countries={CountriesContent} pillars={["ff"]} />
-        <ProjectList projects={ProjectsContent} />
+        <ProjectsWidget countries={projectCountries} pillars={pillars} />
+        <ProjectList projects={[]} />
+        <Paginator />
         <br />
       </main>
       <Footer

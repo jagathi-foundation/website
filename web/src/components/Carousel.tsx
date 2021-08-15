@@ -23,11 +23,11 @@ const Carousel: React.FC<Props> = ({ slides }) => {
         {slides.map((slide, key) => {
 
           return (
-            <div key={key}>
+            <div key={key} className="flex">
               <img
                 src={cmsImg(slide.image)}
                 style={{ height: "490px" }}
-                className="object-cover object-center"
+                className="object-contain"
                 alt={slide.name}
               />
             </div>
