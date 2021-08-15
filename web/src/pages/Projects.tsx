@@ -24,7 +24,6 @@ const Projects: React.FC = () => {
   const [pillars, setPillars] = useState<PillarsListType | null>(null);
   const [projectCountries, setProjectCountries] =
     useState<CountriesListType | null>(null);
-
   const [projects, setProjects] = useState<ProjectsType | null>(null);
   const [footersData, setFooterData] = useState<{
     socials: SocialLinksType;
