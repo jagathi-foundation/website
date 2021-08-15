@@ -23,7 +23,7 @@ const Navbar: React.FC<Props> = ({ navLinks, page }) => {
               <a
                 href={link.url}
                 key={key}
-                className={`px-5 text-lg cursor-pointer underline ${
+                className={`px-5 text-lg cursor-pointer hover:underline ${
                   link.name === page && "underline"
                 }`}
                 target="_blank"
