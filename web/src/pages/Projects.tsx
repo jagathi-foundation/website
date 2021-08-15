@@ -16,7 +16,7 @@ import {
   BankAddressType,
 } from "../types/NavFooterTypes";
 import { PillarsListType } from "../types/AboutTypes";
-import { CountriesListType } from "../types/ProjectTypes";
+import { CountriesListType, ProjectsType } from "../types/ProjectTypes";
 
 const Projects: React.FC = () => {
   //State
@@ -24,6 +24,8 @@ const Projects: React.FC = () => {
   const [pillars, setPillars] = useState<PillarsListType | null>(null);
   const [projectCountries, setProjectCountries] =
     useState<CountriesListType | null>(null);
+
+  const [projects, setProjects] = useState<ProjectsType | null>(null);
   const [footersData, setFooterData] = useState<{
     socials: SocialLinksType;
     contact: ContactInformationType;
@@ -33,8 +35,13 @@ const Projects: React.FC = () => {
   //Get Content
   useEffect(() => {
     (async () => {
-      const [navlinkData, pillarsData, projectCountriesData, footerData] =
-        await getProjectsContent();
+      const [
+        navlinkData,
+        pillarsData,
+        projectCountriesData,
+        projectsData,
+        footerData,
+      ] = await getProjectsContent();
 
       setNavLinks(navlinkData as NavLinksType);
       setPillars(
@@ -45,6 +52,7 @@ const Projects: React.FC = () => {
           (country: any) => country.name
         ) as CountriesListType
       );
+      setProjects(projectsData as ProjectsType);
       setFooterData({
         bank: footerData.bankaddressURL,
         contact: { email: footerData.email, location: footerData.location },
@@ -58,7 +66,7 @@ const Projects: React.FC = () => {
     })();
   }, []);
 
-  if (!navLinks || !footersData || !pillars || !projectCountries) {
+  if (!navLinks || !footersData || !pillars || !projectCountries || !projects) {
     return <Spinner />;
   }
 
@@ -68,7 +76,7 @@ const Projects: React.FC = () => {
       <main className="container m-auto">
         <h1 className="text-4xl text-center pt-10">Our Projects</h1>
         <ProjectsWidget countries={projectCountries} pillars={pillars} />
-        <ProjectList projects={[]} />
+        <ProjectList projects={projects} />
         <Paginator />
         <br />
       </main>
