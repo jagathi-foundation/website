@@ -66,12 +66,12 @@ const CoreTeam: React.FC<Props> = ({ founder, coreTeam }) => {
               key={key}
             >
               <img
-                src={person.img}
+                src={cmsImg(person.image)}
                 alt="W"
                 className="rounded-t-md w-full object-fit object-center"
               />
               <h1 className="text-center pt-4 text-2xl">{person.name}</h1>
-              <p className="text-center pt-2 pb-4 px-3">{person.desc}</p>
+              <p className="text-center pt-2 pb-4 px-3">{person.description}</p>
             </div>
           );
         })}

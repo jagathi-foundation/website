@@ -21,7 +21,7 @@ const AboutHome: React.FC<Props> = ({ aboutBlob }) => {
         <div className="lg:px-8 xl:text-xl text-lg text-center lg:text-left m-auto mx-3 lg:w-auto my-7">
           <p>{aboutBlob.description}</p>
           <Link to="/about">
-            <button className="my-5 bg-yellow-500 text-white rounded px-5 lg:py-1 py-3">
+            <button className="my-5 bg-yellow-500 text-white rounded px-5 lg:py-1 py-3 hover:bg-yellow-600 shadow-md">
               Read More
             </button>
           </Link>

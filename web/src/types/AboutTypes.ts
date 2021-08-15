@@ -1,13 +1,13 @@
 export type CoreTeamListType = Array<{
-  img: string;
+  image: any;
   name: string;
-  desc: string;
+  description: string;
 }>;
 
 export interface CoreTeamPerson {
-  img: string;
+  image: any;
   name: string;
-  desc: string;
+  description: string;
 }
 
 export interface FounderType {

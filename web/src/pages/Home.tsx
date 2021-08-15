@@ -85,7 +85,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Navbar navLinks={navLinks} />
+      <Navbar navLinks={navLinks} page="Home"/>
       <Carousel slides={carouselItems} />
       <AboutHome aboutBlob={aboutBlob} />
       <Impact impact={impact} />

@@ -12,16 +12,16 @@ const ProjectsWidget: React.FC<Props> = ({ pillars, countries }) => {
     <>
       <section className="lg:justify-between flex w-full my-4 items-center lg:flex-row flex-col justify-center">
         <div className="flex space-x-5 lg:ml-16">
-          <button className="my-5 bg-yellow-500 text-white rounded px-5 py-1">
+          <button className="my-5 bg-yellow-500 text-white rounded px-5 py-1 hover:bg-yellow-600 shadow-md">
             A-Z
           </button>
-          <button className="my-5 bg-yellow-500 text-white rounded px-5 py-1">
+          <button className="my-5 bg-yellow-500 text-white rounded px-5 py-1 hover:bg-yellow-600 shadow-md">
             Z-A
           </button>
-          <button className="my-5 bg-yellow-500 text-white rounded px-5 py-1">
+          <button className="my-5 bg-yellow-500 text-white rounded px-5 py-1 hover:bg-yellow-600 shadow-md">
             Newest First
           </button>
-          <button className="my-5 bg-yellow-500 text-white rounded px-5 py-1">
+          <button className="my-5 bg-yellow-500 text-white rounded px-5 py-1 hover:bg-yellow-600 shadow-md">
             Oldest First
           </button>
         </div>

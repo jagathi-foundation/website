@@ -57,7 +57,7 @@ const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
       </div>
       <div className="w-full text-center">
         <Link to="/projects">
-          <button className="mb-10 bg-yellow-500 text-white rounded px-5 py-2 text-xl">
+          <button className="mb-10 bg-yellow-500 text-white rounded px-5 py-2 text-xl hover:bg-yellow-600 shadow-md">
             See All Projects
           </button>
         </Link>

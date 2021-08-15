@@ -4,9 +4,10 @@ import { NavLinksType } from "../types/NavFooterTypes";
 
 interface Props {
   navLinks: NavLinksType;
+  page: string;
 }
 
-const Navbar: React.FC<Props> = ({ navLinks }) => {
+const Navbar: React.FC<Props> = ({ navLinks, page }) => {
   return (
     <nav className="flex justify-between items-center py-7 px-8">
       <Link to="/">
@@ -22,7 +23,9 @@ const Navbar: React.FC<Props> = ({ navLinks }) => {
               <a
                 href={link.url}
                 key={key}
-                className="px-5 text-lg cursor-pointer hover:underline"
+                className={`px-5 text-lg cursor-pointer underline ${
+                  link.name === page && "underline"
+                }`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -35,7 +38,9 @@ const Navbar: React.FC<Props> = ({ navLinks }) => {
             <Link
               to={link.url}
               key={key}
-              className="px-5 text-lg cursor-pointer hover:underline"
+              className={`px-5 text-lg cursor-pointer hover:underline ${
+                link.name === page && "underline"
+              }`}
             >
               {link.name}
             </Link>
