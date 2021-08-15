@@ -27,7 +27,7 @@ const Carousel: React.FC<Props> = ({ slides }) => {
               <img
                 src={cmsImg(slide.image)}
                 style={{ height: "490px" }}
-                className="object-contain"
+                className="object-cover object-center"
                 alt={slide.name}
               />
             </div>
