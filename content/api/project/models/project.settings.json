@@ -31,15 +31,13 @@
       "pluginOptions": {}
     },
     "pillars": {
-      "collection": "pillars",
-      "via": "project"
-    },
-    "project_countries": {
-      "collection": "project-country",
-      "via": "project"
+      "collection": "pillars"
     },
     "projectstart": {
       "type": "date"
+    },
+    "project_countries": {
+      "collection": "project-country"
     }
   }
 }

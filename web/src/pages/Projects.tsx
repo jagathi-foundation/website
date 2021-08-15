@@ -30,6 +30,9 @@ const Projects: React.FC = () => {
     contact: ContactInformationType;
     bank: BankAddressType;
   } | null>(null);
+  const [projectPillarFilter, setProjectPillarFilter] = useState<string>("All");
+  const [countryFilter, setCountryFilter] = useState<string>("All");
+  const [sort, setSort] = useState<string>("none");
 
   //Get Content
   useEffect(() => {
@@ -69,13 +72,97 @@ const Projects: React.FC = () => {
     return <Spinner />;
   }
 
+  const widgetProps = {
+    projectPillarFilter,
+    setProjectPillarFilter,
+  };
+
+  let filteredProjects: ProjectsType = [];
+
+  if (projectPillarFilter === "All") {
+    filteredProjects = projects;
+  } else {
+    filteredProjects = projects.filter(
+      (project) =>
+        (project as any).pillars
+          .map((p: any) => p.name)
+          .includes(projectPillarFilter) && project
+    );
+  }
+
+  if (countryFilter !== "All") {
+    filteredProjects = filteredProjects.filter(
+      (project) =>
+        (project as any).project_countries
+          .map((p: any) => p.name)
+          .includes(countryFilter) && project
+    );
+  }
+
+  if (sort === "AZ") {
+    filteredProjects = filteredProjects.sort((bef, now) => {
+      const sortedNames = [bef.name, now.name].sort();
+
+      if (sortedNames[0] === bef.name) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+  }
+
+  if (sort === "ZA") {
+    filteredProjects = filteredProjects.sort((bef, now) => {
+      const sortedNames = [bef.name, now.name].sort();
+
+      if (sortedNames[0] === bef.name) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  }
+
+  if (sort === "New") {
+    filteredProjects = filteredProjects.sort((bef, now) => {
+      const befDate = new Date(bef.projectstart);
+      const nowDate = new Date(now.projectstart);
+
+      if (befDate > nowDate) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+  }
+
+  if (sort === "Old") {
+    filteredProjects = filteredProjects.sort((bef, now) => {
+      const befDate = new Date(bef.projectstart);
+      const nowDate = new Date(now.projectstart);
+
+      if (befDate > nowDate) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  }
+
   return (
     <>
       <Navbar navLinks={navLinks} page="Projects" />
       <main className="container m-auto">
         <h1 className="text-4xl text-center pt-10">Our Projects</h1>
-        <ProjectsWidget countries={projectCountries} pillars={pillars} />
-        <ProjectList projects={projects} />
+        <ProjectsWidget
+          countries={projectCountries}
+          pillars={pillars}
+          {...widgetProps}
+          countryFilter={countryFilter}
+          setCountryFilter={setCountryFilter}
+          setSort={setSort}
+        />
+        <ProjectList projects={filteredProjects} />
         <Paginator />
         <br />
       </main>

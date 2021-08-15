@@ -8,8 +8,10 @@ interface Props {
 
 const ProjectList: React.FC<Props> = ({ projects }) => {
   return (
-    <div
-      className="
+    <>
+      {projects.length === 0 && <h1 className="text-center text-2xl mt-10 text-yellow-600">No Projects Found!</h1>}
+      <div
+        className="
           grid grid-rows-1 grid-cols-1
           gap-y-10
           xl:gap-y-10
@@ -23,25 +25,29 @@ const ProjectList: React.FC<Props> = ({ projects }) => {
           my-10
           projects
         "
-    >
-      {projects.map((project, ind) => {
-        return (
-          <div
-            className="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
-            key={ind}
-          >
-            <img
-              src={cmsImg(project.image)}
-              alt="W"
-              className="rounded-t-md w-full object-fit object-center"
-              style={{ minHeight: "10rem" }}
-            />
-            <h1 className="text-center pt-4 text-2xl">{project.name}</h1>
-            <p className="text-center pt-2 pb-4 px-3">{project.description}</p>
-          </div>
-        );
-      })}
-    </div>
+      >
+        {projects.length > 0 &&
+          projects.map((project, ind) => {
+            return (
+              <div
+                className="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+                key={ind}
+              >
+                <img
+                  src={cmsImg(project.image)}
+                  alt="W"
+                  className="rounded-t-md w-full object-fit object-center"
+                  style={{ minHeight: "10rem" }}
+                />
+                <h1 className="text-center pt-4 text-2xl">{project.name}</h1>
+                <p className="text-center pt-2 pb-4 px-3">
+                  {project.description}
+                </p>
+              </div>
+            );
+          })}
+      </div>
+    </>
   );
 };
 

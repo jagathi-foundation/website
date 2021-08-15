@@ -13,10 +13,6 @@
   "attributes": {
     "name": {
       "type": "string"
-    },
-    "project": {
-      "via": "pillars",
-      "model": "project"
     }
   }
 }
