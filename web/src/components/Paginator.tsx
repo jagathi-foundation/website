@@ -1,186 +1,26 @@
 import React from "react";
 
-const Paginator: React.FC = () => {
+interface Props {
+  len: number;
+  setPlen: React.Dispatch<React.SetStateAction<number>>;
+  plen: number;
+}
+
+const Paginator: React.FC<Props> = ({ len, setPlen, plen }) => {
+  const noMoreContent = plen * 9 >= len;
   return (
-    <div className="pt-5 pb-7">
-      <nav className="block">
-        <ul className="flex pl-0 rounded list-none flex-wrap justify-center">
-          <li>
-            <a
-              href="#pablo"
-              className="
-                  first:ml-0
-                  text-xs
-                  font-semibold
-                  flex
-                  w-8
-                  h-8
-                  mx-1
-                  p-0
-                  rounded-full
-                  items-center
-                  justify-center
-                  leading-tight
-                  relative
-                  border border-solid border-yellow-500
-                  text-yellow-500
-                "
-            >
-              <i className="fas fa-chevron-left -ml-px"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#pablo"
-              className="
-                  first:ml-0
-                  text-xs
-                  font-semibold
-                  flex
-                  w-8
-                  h-8
-                  mx-1
-                  p-0
-                  rounded-full
-                  items-center
-                  justify-center
-                  leading-tight
-                  relative
-                  border border-solid border-yellow-500
-                  text-white
-                  bg-yellow-500
-                "
-            >
-              1
-            </a>
-          </li>
-          <li>
-            <a
-              href="#pablo"
-              className="
-                  first:ml-0
-                  text-xs
-                  font-semibold
-                  flex
-                  w-8
-                  h-8
-                  mx-1
-                  p-0
-                  rounded-full
-                  items-center
-                  justify-center
-                  leading-tight
-                  relative
-                  border border-solid border-yellow-500
-                  text-yellow-500
-                "
-            >
-              2
-            </a>
-          </li>
-          <li>
-            <a
-              href="#pablo"
-              className="
-                  first:ml-0
-                  text-xs
-                  font-semibold
-                  flex
-                  w-8
-                  h-8
-                  mx-1
-                  p-0
-                  rounded-full
-                  items-center
-                  justify-center
-                  leading-tight
-                  relative
-                  border border-solid border-yellow-500
-                  bg-white
-                  text-yellow-500
-                "
-            >
-              3
-            </a>
-          </li>
-          <li>
-            <a
-              href="#pablo"
-              className="
-                  first:ml-0
-                  text-xs
-                  font-semibold
-                  flex
-                  w-8
-                  h-8
-                  mx-1
-                  p-0
-                  rounded-full
-                  items-center
-                  justify-center
-                  leading-tight
-                  relative
-                  border border-solid border-yellow-500
-                  bg-white
-                  text-yellow-500
-                "
-            >
-              4
-            </a>
-          </li>
-          <li>
-            <a
-              href="#pablo"
-              className="
-                  first:ml-0
-                  text-xs
-                  font-semibold
-                  flex
-                  w-8
-                  h-8
-                  mx-1
-                  p-0
-                  rounded-full
-                  items-center
-                  justify-center
-                  leading-tight
-                  relative
-                  border border-solid border-yellow-500
-                  bg-white
-                  text-yellow-500
-                "
-            >
-              5
-            </a>
-          </li>
-          <li>
-            <a
-              href="#pablo"
-              className="
-                  first:ml-0
-                  text-xs
-                  font-semibold
-                  flex
-                  w-8
-                  h-8
-                  mx-1
-                  p-0
-                  rounded-full
-                  items-center
-                  justify-center
-                  leading-tight
-                  relative
-                  border border-solid border-yellow-500
-                  bg-white
-                  text-yellow-500
-                "
-            >
-              <i className="fas fa-chevron-right -mr-px"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <>
+      {len > 9 && (
+        <div className="pt-4 pb-5">
+          <button
+            className="items-center flex text-center m-auto bg-yellow-500  py-2 px-7 text-white rounded shadow-md cursor-pointer"
+            onClick={() => (noMoreContent ? setPlen(1) : setPlen(plen + 1))}
+          >
+            {noMoreContent ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

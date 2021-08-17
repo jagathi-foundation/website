@@ -21,11 +21,11 @@ const ProjectList: React.FC<Props> = ({ projects }) => {
           place-items-center
           md:grid-cols-2 md:grid-rows-2
           lg:grid-cols-3 lg:grid-rows-2
-          max-w-7xl
-          my-10
+          max-w-7xl 
+          my-7
           projects
         "
-      >
+      > 
         {projects.length > 0 &&
           projects.map((project, ind) => {
             return (

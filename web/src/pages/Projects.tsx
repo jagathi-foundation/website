@@ -17,8 +17,13 @@ import {
 } from "../types/NavFooterTypes";
 import { PillarsListType } from "../types/AboutTypes";
 import { CountriesListType, ProjectsType } from "../types/ProjectTypes";
+import { TopicToPillar } from "../constants/TopicToPillar";
+import type { TopicToPillarType } from "../constants/TopicToPillar";
 
 const Projects: React.FC = () => {
+  //Topic String
+  const queryTopic = new URLSearchParams(window.location.search).get("topic");
+  const pillarV = TopicToPillar[queryTopic as TopicToPillarType];
   //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
   const [pillars, setPillars] = useState<PillarsListType | null>(null);
@@ -30,9 +35,13 @@ const Projects: React.FC = () => {
     contact: ContactInformationType;
     bank: BankAddressType;
   } | null>(null);
-  const [projectPillarFilter, setProjectPillarFilter] = useState<string>("All");
+  const [projectPillarFilter, setProjectPillarFilter] = useState<string>(
+    pillarV ?? "All"
+  );
   const [countryFilter, setCountryFilter] = useState<string>("All");
   const [sort, setSort] = useState<string>("none");
+  const [paginator, setPaginator] = useState<number>(1);
+  const [projectLengths, setProjectLengths] = useState<number>(0);
 
   //Get Content
   useEffect(() => {
@@ -55,6 +64,7 @@ const Projects: React.FC = () => {
         ) as CountriesListType
       );
       setProjects(projectsData as ProjectsType);
+      setProjectLengths(projectsData.length);
       setFooterData({
         bank: footerData.bankaddressURL,
         contact: { email: footerData.email, location: footerData.location },
@@ -149,6 +159,8 @@ const Projects: React.FC = () => {
     });
   }
 
+  filteredProjects = filteredProjects.slice(0, 9 * paginator);
+
   return (
     <>
       <Navbar navLinks={navLinks} page="Projects" />
@@ -163,7 +175,11 @@ const Projects: React.FC = () => {
           setSort={setSort}
         />
         <ProjectList projects={filteredProjects} />
-        <Paginator />
+        <Paginator
+          len={projectLengths}
+          plen={paginator}
+          setPlen={setPaginator}
+        />
         <br />
       </main>
       <Footer
