@@ -36,8 +36,8 @@ const ProjectList: React.FC<Props> = ({ projects }) => {
                 <img
                   src={cmsImg(project.image)}
                   alt="W"
-                  className="rounded-t-md w-full object-fit object-center"
-                  style={{ minHeight: "10rem" }}
+                  className="rounded-t-md w-full object-cover object-center"
+                  style={{ maxHeight: "11rem" }}
                 />
                 <h1 className="text-center pt-4 text-2xl">{project.name}</h1>
                 <p className="text-center pt-2 pb-4 px-3">

@@ -41,7 +41,6 @@ const Projects: React.FC = () => {
   const [countryFilter, setCountryFilter] = useState<string>("All");
   const [sort, setSort] = useState<string>("none");
   const [paginator, setPaginator] = useState<number>(1);
-  const [projectLengths, setProjectLengths] = useState<number>(0);
 
   //Get Content
   useEffect(() => {
@@ -64,7 +63,6 @@ const Projects: React.FC = () => {
         ) as CountriesListType
       );
       setProjects(projectsData as ProjectsType);
-      setProjectLengths(projectsData.length);
       setFooterData({
         bank: footerData.bankaddressURL,
         contact: { email: footerData.email, location: footerData.location },
@@ -159,6 +157,10 @@ const Projects: React.FC = () => {
     });
   }
 
+  const filteredProjectsUnP = filteredProjects
+
+  console.log(filteredProjectsUnP.length)
+
   filteredProjects = filteredProjects.slice(0, 9 * paginator);
 
   return (
@@ -176,7 +178,7 @@ const Projects: React.FC = () => {
         />
         <ProjectList projects={filteredProjects} />
         <Paginator
-          len={projectLengths}
+          len={filteredProjectsUnP.length}
           plen={paginator}
           setPlen={setPaginator}
         />
