@@ -6,6 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #FBFBF2;
 }
 
 @layer components {
