@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "image": {
+    "media": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -26,6 +26,10 @@
     },
     "name": {
       "type": "string"
+    },
+    "video": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

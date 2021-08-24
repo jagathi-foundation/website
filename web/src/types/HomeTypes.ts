@@ -23,11 +23,13 @@ export interface AboutBlobContentType {
 
 export interface SlideItemType {
   name: string;
-  image: any;
+  media: any;
+  video: boolean
 }
 
 export type SlideItemTypeList = Array<{
   name: string;
-  image: any;
+  media: any;
+  video: boolean
 }>;
  

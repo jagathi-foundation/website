@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "about_blobs",
   "info": {
-    "name": "About Blob"
+    "name": "About Blob",
+    "description": ""
   },
   "options": {
     "increments": true,
