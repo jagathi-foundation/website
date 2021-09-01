@@ -86,8 +86,8 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
           </a>
         </div>
       </div>
-      <div className="border-t-2 border-yellow-600 w-1/2 m-auto py-3 lg:pb-3 pb-6">
-        © All Rights Reserved by Jagathi Foundation. Created By <a href="https://bharadwaj.duggaraju.com" className="text-yellow-500">Bharadwaj Duggaraju</a>
+      <div className="border-t-2 border-yellow-600 w-1/2 m-auto py-3 lg:pb-3 pb-6 text-lg">
+        © All Rights Reserved by Jagathi Foundation. Created By <a href="https://bharadwaj.duggaraju.com" className="text-yellow-500">Bharadwaj Duggaraju</a>.
       </div>
     </footer>
   );

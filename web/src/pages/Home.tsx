@@ -4,7 +4,7 @@ import Carousel from "../components/Carousel";
 import Navbar from "../components/Navbar";
 import AboutHome from "../components/AboutHome";
 import Impact from "../components/Impact";
-import ProjectTopics from "../components/ProjectTopics";
+import PillarsHome from "../components/PiilarsHome";
 import Footer from "../components/Footer";
 import Spinner from "../components/Loader";
 
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
   );
   const [aboutBlob, setAboutBlob] = useState<AboutBlobContentType | null>(null);
   const [impact, setImpact] = useState<ImpactDataType | null>(null);
-  const [projectTopics, setProjectTopics] =
+  const [pillars, setPillars] =
     useState<ProjectTopicTypeList | null>(null);
 
   const [footerData, setFooterData] = useState<{
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
         carouselData,
         aboutBlobData,
         impactData,
-        projectTopicsData,
+        pillarsData,
         footerData,
       ] = await getHomeContent();
 
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
       setCarouselItems(carouselData as SlideItemTypeList);
       setAboutBlob(aboutBlobData as AboutBlobContentType);
       setImpact(impactData as ImpactDataType);
-      setProjectTopics(projectTopicsData as ProjectTopicTypeList);
+      setPillars(pillarsData as ProjectTopicTypeList);
       setFooterData({
         bank: footerData.bankaddressURL,
         contact: { email: footerData.email, location: footerData.location },
@@ -77,7 +77,7 @@ const Home: React.FC = () => {
     !carouselItems ||
     !aboutBlob ||
     !impact ||
-    !projectTopics ||
+    !pillars ||
     !footerData
   ) {
     return <Spinner />;
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
       <Carousel slides={carouselItems} />
       <AboutHome aboutBlob={aboutBlob} />
       <Impact impact={impact} />
-      <ProjectTopics projectTopics={projectTopics} />
+      <PillarsHome pillars={pillars} />
       <Footer
         socialLinks={footerData.socials}
         contactInfo={footerData.contact}

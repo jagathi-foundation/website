@@ -4,14 +4,14 @@ import { ProjectTopicTypeList } from "../types/HomeTypes";
 import cmsImg from "../utils/CMSImg";
 
 interface Props {
-  projectTopics: ProjectTopicTypeList;
+  pillars: ProjectTopicTypeList;
 }
 
-const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
+const PillarsHome: React.FC<Props> = ({ pillars }) => {
   return (
     <>
-      <h1 className="text-center pt-11 text-3xl px-6">
-        Current Project Topics
+      <h1 className="text-center pt-10 text-3xl px-6">
+        Pillars
       </h1>
       <div
         className="
@@ -20,15 +20,18 @@ const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
           xl:gap-y-0
           items-center
           justify-center
-          m-auto
-          my-5
+          ml-auto
+          mr-auto
+          xl:mb-8
+          xl:mt-5
+          mt-8
+          mb-12
           place-items-center
-          md:grid-cols-2 md:grid-rows-2
-          lg:grid-cols-3 lg:grid-rows-2
-          max-w-7xl
+          lg:grid-cols-2 lg:grid-rows-2
+          max-w-3xl
         "
       >
-        {projectTopics.map((topic, key) => {
+        {pillars.map((topic, key) => {
           return (
             <Link to={`/projects?topic=${encodeURI(topic.name)}`} key={key}>
               <div
@@ -38,7 +41,7 @@ const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
                   shadow-lg
                   cursor-pointer
                   max-w-xs
-                  ${key === projectTopics.length - 1 && "xl:my-5 my-0"}
+                  ${key === pillars.length - 1 && "xl:my-5 my-0"}
                 `}
               >
                 <img
@@ -55,15 +58,9 @@ const ProjectTopics: React.FC<Props> = ({ projectTopics }) => {
           );
         })}
       </div>
-      <div className="w-full text-center">
-        <Link to="/projects">
-          <button className="mb-10 bg-yellow-500 text-white rounded px-5 py-2 text-xl hover:bg-yellow-600 shadow-md">
-            See All Projects
-          </button>
-        </Link>
-      </div>
+  
     </>
   );
 };
 
-export default ProjectTopics;
+export default PillarsHome;

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import AboutUs from "../components/AboutUs";
-import Pillars from "../components/Pillars";
 import CoreTeam from "../components/CoreTeam";
 //Content Getter
 import getAboutContent from "../utils/GetAboutContent";
@@ -12,7 +11,6 @@ import Spinner from "../components/Loader";
 //Types
 import {
   AboutFullContentType,
-  PillarsListType,
   FounderType,
   CoreTeamListType,
 } from "../types/AboutTypes";
@@ -27,7 +25,6 @@ const About: React.FC = () => {
   //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
   const [aboutFull, setAboutFull] = useState<AboutFullContentType | null>(null);
-  const [pillars, setPillars] = useState<PillarsListType | null>(null);
   const [founder, setFounder] = useState<FounderType | null>(null);
   const [coreTeam, setCoreTeam] = useState<CoreTeamListType | null>(null);
   const [footerData, setFooterData] = useState<{
@@ -42,7 +39,6 @@ const About: React.FC = () => {
       const [
         navlinkData,
         aboutFullData,
-        pillarsData,
         founderData,
         coreTeamData,
         footerData,
@@ -50,9 +46,6 @@ const About: React.FC = () => {
 
       setNavLinks(navlinkData as NavLinksType);
       setAboutFull(aboutFullData as AboutFullContentType);
-      setPillars(
-        pillarsData.map((pillar: any) => pillar.name) as PillarsListType
-      );
       setFounder(founderData as FounderType);
       setCoreTeam(coreTeamData as CoreTeamListType);
       setFooterData({
@@ -73,7 +66,6 @@ const About: React.FC = () => {
     !navLinks ||
     !footerData ||
     !aboutFull ||
-    !pillars ||
     !founder ||
     !coreTeam
   ) {
@@ -84,7 +76,7 @@ const About: React.FC = () => {
     <>
       <Navbar navLinks={navLinks} page="About" />
       <AboutUs aboutFullContent={aboutFull} />
-      <Pillars pillars={pillars} />
+   
       <CoreTeam coreTeam={coreTeam} founder={founder} />
       <Footer
         socialLinks={footerData.socials}

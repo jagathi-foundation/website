@@ -9,9 +9,6 @@ interface Props {
 const AboutUs: React.FC<Props> = ({ aboutFullContent }) => {
   return (
     <>
-      <h1 className="lg:text-4xl text-center pt-10 text-3xl">
-        The Jagathi Foundation
-      </h1>
       <img
         src={cmsImg(aboutFullContent.coverimg)}
         alt="Company"

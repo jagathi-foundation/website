@@ -4,8 +4,8 @@ import {
   CarouselURL,
   AboutBlobURL,
   ImpactURL,
-  ProjectTopicsURL,
   FooterURL,
+  PillarsURL
 } from "../constants/Endpoints";
 
 export default async function getHomeContent() {
@@ -14,7 +14,7 @@ export default async function getHomeContent() {
     CarouselURL,
     AboutBlobURL,
     ImpactURL,
-    ProjectTopicsURL,
+    PillarsURL,
     FooterURL,
   ];
 
@@ -25,7 +25,7 @@ export default async function getHomeContent() {
     carouselReq,
     aboutBlobReq,
     impactReq,
-    projectTopicReq,
+    pillarsReq,
     footerReq,
   ] = await Promise.all(requests);
 
@@ -34,7 +34,7 @@ export default async function getHomeContent() {
     carouselReq.data,
     aboutBlobReq.data,
     impactReq.data,
-    projectTopicReq.data,
+    pillarsReq.data,
     footerReq.data,
   ];
 

@@ -17,13 +17,10 @@ import {
 } from "../types/NavFooterTypes";
 import { PillarsListType } from "../types/AboutTypes";
 import { CountriesListType, ProjectsType } from "../types/ProjectTypes";
-import { TopicToPillar } from "../constants/TopicToPillar";
-import type { TopicToPillarType } from "../constants/TopicToPillar";
 
 const Projects: React.FC = () => {
   //Topic String
-  const queryTopic = new URLSearchParams(window.location.search).get("topic");
-  const pillarV = TopicToPillar[queryTopic as TopicToPillarType];
+  const pillarV = new URLSearchParams(window.location.search).get("topic");
   //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
   const [pillars, setPillars] = useState<PillarsListType | null>(null);
