@@ -11,9 +11,9 @@ export type ProjectTopicTypeList = Array<{
 }>;
 
 export interface ImpactDataType {
-  servedpeople: number;
+  projectcount: number;
   volunteers: number;
-  workhours: number;
+  volunteerhours: number;
 }
 
 export interface AboutBlobContentType {

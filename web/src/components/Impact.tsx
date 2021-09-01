@@ -19,7 +19,7 @@ const Impact: React.FC<Props> = ({ impact }) => {
             ></span>
             <h1 className="lg:text-2xl text-xl">
               <sup className="lg:text-xl text-lg text-yellow-800 px-1">
-                {impact.servedpeople}
+                {impact.projectcount}
               </sup>
               People Served
             </h1>
@@ -45,7 +45,7 @@ const Impact: React.FC<Props> = ({ impact }) => {
             ></span>
             <h1 className="lg:text-2xl text-xl">
               <sup className="lg:text-xl text-lg text-yellow-800 px-1">
-                {impact.workhours}
+                {impact.volunteerhours}
               </sup>
               Work Hours
             </h1>

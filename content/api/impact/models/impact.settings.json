@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "servedpeople": {
+    "projectcount": {
       "type": "integer"
     },
     "volunteers": {
       "type": "integer"
     },
-    "workhours": {
+    "volunteerhours": {
       "type": "integer"
     }
   }
