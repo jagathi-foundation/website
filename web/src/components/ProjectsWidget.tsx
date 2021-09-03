@@ -22,7 +22,7 @@ const ProjectsWidget: React.FC<Props> = ({
   setSort,
 }) => {
   return (
-    <>
+    <div style={{marginTop: "4.1rem"}}>
       <section className="lg:justify-between flex w-full my-4 items-center lg:flex-row flex-col justify-center">
         <div className="flex space-x-5 lg:ml-16">
           <button
@@ -85,7 +85,7 @@ const ProjectsWidget: React.FC<Props> = ({
           </select>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -20,7 +20,7 @@ const Carousel: React.FC<Props> = ({ slides }) => {
   };
 
   return (
-    <>
+    <div style={{marginTop: "7.1rem"}}>
       <CarouselR
         className="bg-gray-300 h-ft"
         showThumbs={false}
@@ -55,7 +55,7 @@ const Carousel: React.FC<Props> = ({ slides }) => {
           );
         })}
       </CarouselR>
-    </>
+    </div>
   );
 };
 

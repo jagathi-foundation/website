@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #FBFBF2;
+  background-color: #fcfcf4;
 }
 
 @layer components {
@@ -22,5 +22,109 @@ body {
   .carousel .control-prev.control-arrow,
   .carousel .control-prev.control-arrow:hover {
     background-color: orange;
+  }
+
+  header {
+    text-align: center;
+    background: #fcfcf4 center center / auto 100%;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    -webkit-box-align: center;
+    align-items: center;
+    border-bottom: 3px solid rgba(221, 226, 227, 0.2);
+    z-index: 5;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    margin-right: 3rem;
+  }
+
+  .menuicon {
+    color: black;
+    font-size: 2.5rem;
+    display: none;
+    margin: 1.5rem 0;
+    margin-right: 3rem;
+    cursor: pointer;
+  }
+
+  nav a {
+    font-size: 1.15rem;
+  }
+
+  .closeicon {
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    display: none;
+  }
+
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (max-width: 1090px) {
+    :root {
+      font-size: 14px;
+    }
+    .menuicon {
+      display: block;
+    }
+    nav {
+      flex-direction: column;
+      background-color: orange;
+      margin: 0 auto;
+      padding: 5rem;
+      position: fixed;
+      z-index: 100;
+      top: -100vh;
+      height: 100vh;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      right: 0;
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    nav a {
+      color: white;
+      font-size: 1.5rem;
+      margin: .8rem 0;
+    }
+
+    .closeicon {
+      display: block;
+    }
+  }
+
+
+  .jf {
+    display: block;
+  }
+
+  @media (max-width: 500px) {
+    .jf {
+      display: none;
+    }
   }
 }

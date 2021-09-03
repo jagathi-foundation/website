@@ -17,8 +17,9 @@ import {
 } from "../types/NavFooterTypes";
 import { PillarsListType } from "../types/AboutTypes";
 import { CountriesListType, ProjectsType } from "../types/ProjectTypes";
+import { RouteComponentProps } from 'react-router';
 
-const Projects: React.FC = () => {
+const Projects: React.FC<RouteComponentProps> = ({match}) => {
   //Topic String
   const pillarV = new URLSearchParams(window.location.search).get("topic");
   //State
@@ -162,7 +163,7 @@ const Projects: React.FC = () => {
 
   return (
     <>
-      <Navbar navLinks={navLinks} page="Projects" />
+      <Navbar navLinks={navLinks} page="Projects" url={match}/>
       <main className="container m-auto">
         <h1 className="text-4xl text-center pt-10">Our Projects</h1>
         <ProjectsWidget

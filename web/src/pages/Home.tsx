@@ -23,8 +23,9 @@ import {
   ImpactDataType,
   ProjectTopicTypeList,
 } from "../types/HomeTypes";
+import { RouteComponentProps } from "react-router";
 
-const Home: React.FC = () => {
+const Home: React.FC<RouteComponentProps> = ({ match }) => {
   //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
   const [carouselItems, setCarouselItems] = useState<SlideItemTypeList | null>(
@@ -32,8 +33,7 @@ const Home: React.FC = () => {
   );
   const [aboutBlob, setAboutBlob] = useState<AboutBlobContentType | null>(null);
   const [impact, setImpact] = useState<ImpactDataType | null>(null);
-  const [pillars, setPillars] =
-    useState<ProjectTopicTypeList | null>(null);
+  const [pillars, setPillars] = useState<ProjectTopicTypeList | null>(null);
 
   const [footerData, setFooterData] = useState<{
     socials: SocialLinksType;
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Navbar navLinks={navLinks} page="Home"/>
+      <Navbar navLinks={navLinks} page="Home" url={match} />
       <Carousel slides={carouselItems} />
       <AboutHome aboutBlob={aboutBlob} />
       <Impact impact={impact} />

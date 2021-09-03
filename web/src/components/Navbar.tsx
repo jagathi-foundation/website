@@ -5,56 +5,71 @@ import { NavLinksType } from "../types/NavFooterTypes";
 interface Props {
   navLinks: NavLinksType;
   page: string;
+  url: any;
 }
 
-const Navbar: React.FC<Props> = ({ navLinks, page }) => {
+const Navbar: React.FC<Props> = ({ navLinks, page, url }) => {
+  React.useEffect(() => {
+    //Menu Opening
+    const s = (key: any) => {
+      return document.querySelector(key);
+    };
+    const menuopen = s(".menuicon");
+    const menuclose = s(".closeicon");
+    menuopen.addEventListener("click", (e: any) => {
+      s("nav").style = "animation: diagonal 200ms linear; top: 0;";
+    });
+    menuclose.addEventListener("click", (e: any) => {
+      s("nav").style = " top: -100vh;";
+    });
+  }, []);
+
   return (
-    <nav className="flex justify-between items-center py-7 px-8">
-      <Link to="/">
-        <div className="flex items-center cursor-pointer">
-          <img src="logo.svg" alt="Logo" className="w-11 h-11" />
-          <h1 className="text-3xl px-3">Jagathi Foundation</h1>
-        </div>
-      </Link>
-      <div className="item-center hidden lg:flex">
-        {navLinks.map((link, key) => {
-          if (link.externalLink) {
+    <header>
+      <section className="nav-wrap">
+        <Link to="/" className="my-8 ml-12">
+          <div className="flex items-center cursor-pointer">
+            <img src="logo.svg" alt="Logo" className="w-11 h-11" />
+            <h1 className="text-3xl px-3 jf">
+              Jagathi Foundation
+            </h1>
+          </div>
+        </Link>
+        <i className="icon ion-md-menu menuicon"></i>
+        <nav>
+          <i className="icon ion-md-close closeicon"></i>
+          {navLinks.map((link, key) => {
+            if (link.externalLink) {
+              return (
+                <a
+                  href={link.url}
+                  key={key}
+                  className={`px-5  cursor-pointer hover:underline ${
+                    link.url === url.path && "underline"
+                  }`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {link.name}
+                </a>
+              );
+            }
+
             return (
-              <a
-                href={link.url}
+              <Link
+                to={link.url}
                 key={key}
-                className={`px-5 text-lg cursor-pointer hover:underline ${
-                  link.name === page && "underline"
+                className={`px-5  cursor-pointer hover:underline ${
+                  link.url === url.path && "underline"
                 }`}
-                target="_blank"
-                rel="noreferrer"
               >
                 {link.name}
-              </a>
+              </Link>
             );
-          }
-
-          return (
-            <Link
-              to={link.url}
-              key={key}
-              className={`px-5 text-lg cursor-pointer hover:underline ${
-                link.name === page && "underline"
-              }`}
-            >
-              {link.name}
-            </Link>
-          );
-        })}
-      </div>
-      <div className="block lg:hidden">
-        <img
-          src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"
-          className="w-10"
-          alt="Hamburgur"
-        />
-      </div>
-    </nav>
+          })}
+        </nav>
+      </section>
+    </header>
   );
 };
 

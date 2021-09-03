@@ -11,7 +11,7 @@ const PillarsHome: React.FC<Props> = ({ pillars }) => {
   return (
     <>
       <h1 className="text-center pt-10 text-3xl px-6">
-        Pillars
+        Our Pillars
       </h1>
       <div
         className="

@@ -8,6 +8,7 @@ import CoreTeam from "../components/CoreTeam";
 import getAboutContent from "../utils/GetAboutContent";
 //Loader
 import Spinner from "../components/Loader";
+import { RouteComponentProps } from "react-router";
 //Types
 import {
   AboutFullContentType,
@@ -21,7 +22,7 @@ import {
   BankAddressType,
 } from "../types/NavFooterTypes";
 
-const About: React.FC = () => {
+const About: React.FC<RouteComponentProps> = ({ match }) => {
   //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
   const [aboutFull, setAboutFull] = useState<AboutFullContentType | null>(null);
@@ -62,21 +63,15 @@ const About: React.FC = () => {
   }, []);
 
   // Loader
-  if (
-    !navLinks ||
-    !footerData ||
-    !aboutFull ||
-    !founder ||
-    !coreTeam
-  ) {
+  if (!navLinks || !footerData || !aboutFull || !founder || !coreTeam) {
     return <Spinner />;
   }
 
   return (
     <>
-      <Navbar navLinks={navLinks} page="About" />
+      <Navbar navLinks={navLinks} page="About" url={match} />
       <AboutUs aboutFullContent={aboutFull} />
-   
+
       <CoreTeam coreTeam={coreTeam} founder={founder} />
       <Footer
         socialLinks={footerData.socials}
