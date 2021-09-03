@@ -66,7 +66,7 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
           <h1>Get In Touch</h1>
           <h3
             className="md:flex cursor-pointer"
-            onClick={navg(contactInfo.email)}
+            onClick={navg("mailto:" + contactInfo.email)}
           >
             <span className="px-3">📧</span> {contactInfo.email}
           </h3>
@@ -86,8 +86,13 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
           </a>
         </div>
       </div>
-      <div className="border-t-2 border-yellow-600 w-1/2 m-auto py-3 lg:pb-3 pb-6 text-lg">
-        © All Rights Reserved by Jagathi Foundation. Created By <a href="https://bharadwaj.duggaraju.com" className="text-yellow-500">Bharadwaj Duggaraju</a>.
+      <div className="border-t-2 border-yellow-600 w-3/4 m-auto py-3 lg:pb-3 pb-6 text-lg">
+        {new Date().getFullYear()} © All Rights Reserved by Jagathi Foundation.
+        Created By{" "}
+        <a href="https://bharadwaj.duggaraju.com" className="text-yellow-500">
+          Bharadwaj Duggaraju
+        </a>
+        .
       </div>
     </footer>
   );
