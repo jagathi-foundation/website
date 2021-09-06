@@ -10,39 +10,7 @@ interface Props {
 const CoreTeam: React.FC<Props> = ({ founder, coreTeam }) => {
   return (
     <>
-      <h1 className="text-4xl text-center pt-5">Our Core Team</h1>
-      <div
-        className="
-          flex
-          justify-center
-          w-4/5
-          mx-auto
-          my-10
-          max-w-5xl
-          lg:flex-row
-          flex-col
-          items-center
-          lg:text-left
-          text-center
-        "
-      >
-        <img
-          src={cmsImg(founder.image)}
-          alt="Founder"
-          className="
-            max-w-md
-            w-48
-            h-48
-            rounded-full
-            object-cover object-center
-            shadow-md
-          "
-        />
-        <div className="px-8 text-xl pt-11 lg:py-0">
-          <h1 className="text-3xl">{founder.name} - Founder</h1>
-          <p className="pt-5">{founder.description}</p>
-        </div>
-      </div>
+      <h1 className="text-4xl text-center pt-1 pb-5">Our Core Team</h1>
       <br />
       <div
         className="
@@ -62,13 +30,13 @@ const CoreTeam: React.FC<Props> = ({ founder, coreTeam }) => {
         {coreTeam.map((person, key) => {
           return (
             <div
-              className="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+              className="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer w-80"
               key={key}
             >
               <img
                 src={cmsImg(person.image)}
                 alt="W"
-                className="rounded-t-md w-full object-fit object-center"
+                className="rounded-t-md w-full object-cover object-center h-48"
               />
               <h1 className="text-center pt-4 text-2xl">{person.name}</h1>
               <p className="text-center pt-2 pb-4 px-3">{person.description}</p>
@@ -76,7 +44,6 @@ const CoreTeam: React.FC<Props> = ({ founder, coreTeam }) => {
           );
         })}
       </div>
-      <br />
       <br />
       <br />
     </>

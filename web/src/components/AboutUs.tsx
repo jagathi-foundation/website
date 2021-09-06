@@ -8,18 +8,18 @@ interface Props {
 
 const AboutUs: React.FC<Props> = ({ aboutFullContent }) => {
   return (
-    <div style={{ marginTop: "11rem" }}>
+    <div style={{ marginTop: "9.6rem" }}>
       <img
         src={cmsImg(aboutFullContent.coverimg)}
         alt="Company"
         className="
-          w-8/12
-          h-56
+          w-6/12
           object-cover object-center
           mx-auto
           my-10
           rounded-md
           shadow-md
+
         "
       />
       <div

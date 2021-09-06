@@ -24,7 +24,7 @@ const Impact: React.FC<Props> = ({ impact }) => {
               Projects
             </h1>
           </div>
-          <div className="py-5 lg:px-10 px-6">
+          <div className="py-5 lg:px-10 px-6 lg:pl-28">
             <span
               className="iconify text-center m-auto my-3 text-5xl text-yellow-800"
               data-icon="bi:person"
