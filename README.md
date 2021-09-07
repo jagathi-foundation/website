@@ -6,9 +6,11 @@
 
 
 <h3 align="center">
-  <a href="https://techtoday.azurewebsites.net" target="blank" rel="noreferer">Website</a>
+  <a href="https://jagathifoundation.org" target="blank" rel="noreferer">Website</a>
   <span> · </span>
-  <a href="https://expo.io/@bharadwajd/projects/TechToday">Documentation</a>
+  <a href="https://admin.jagathifoundation.org" target="blank" rel="noreferer">Admin</a>
+  <span> · </span>
+  <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/tree/master/docs">Documentation</a>
 </h3>
 
 ## Codebase
@@ -24,15 +26,13 @@
 
 ## Documentation
 
-<h3>
-  <a href="https://techtoday.azurewebsites.net" target="blank" rel="noreferer">Run Locally</a>
-  <span> · </span>
-  <a href="https://expo.io/@bharadwajd/projects/TechToday">Create Content</a>
-    <span> · </span>
-  <a href="https://expo.io/@bharadwajd/projects/TechToday">Create Pages</a>
-    <span> · </span>
-  <a href="https://expo.io/@bharadwajd/projects/TechToday">Site Deployment</a>
-</h3>
+| Name | Description |
+| :------------------- | :-------------------: | 
+|  <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/blob/master/docs/RunningLocally.md" target="blank" rel="noreferer">Run Locally</a>| How To Develop The Site Locally |
+|  <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/blob/master/docs/CreateContent.md" target="blank" rel="noreferer">Create Content</a>| How To Create Content For The Site |
+|  <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/blob/master/docs/CreatePages.md" target="blank" rel="noreferer">Create Pages</a>| How To Create Pages On The Site |
+|  <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/blob/master/docs/Deployment.md" target="blank" rel="noreferer">Deployment</a>| Info About Site Deployment |
+
 
 ## About
 
