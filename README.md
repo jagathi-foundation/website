@@ -44,7 +44,7 @@ Designed, Created and Hosted by [Bharadwaj Duggaraju](https://bharadwaj.duggaraj
 
 ## Issues
 
-Leave an Issue in the [Issues](https://github.com/bharadwajduggaraju/Jagathi-Foundation/issues) tab
+Leave an Issue in the [Issues](https://github.com/bharadwajduggaraju/Jagathi-Foundation/issues) tab.
 
 ## License
 
