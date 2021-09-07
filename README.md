@@ -15,27 +15,32 @@
 
 | Folder               |      Technologies    | Description    |
 | :------------------- | :-------------------: |  :-------------------:   |
-| [app](app)           |      React Native     | The Mobile App of TechToday   |
-| [client](client)     |     React      |   The Website Client to TechToday
-| [config](config)     | Mongoose, Dotenv | Connections to the DB and Secrets  |
-| [designs](designs)   |  Figma    | Designs of TechToday    |
-| [models](models)     |   Mongoose    | Schema of DB Entities    |
-| [routes](routes)     |   ExpressJS    | API Routes    |
-| [utils](utils)       |      Nodemailer       | Utility Functions    |
-| [validation](validation)|      JOI , JWT      | The Validations for DB Entities and JWT's |
-| [desktop](desktop)|      Electron, React      | The Desktop App of TechToday |
+| [content](content)           |      Strapi & Node.JS    | CMS   |
+| [web](web)     |     React & Typescript      |   Client
+| [mock](mock)     | HTML & Vite | HTML Mock  |
+| [data](data)   |  Figma & TXT    | Info & Designs    |
+| [docs](docs)     |   Markdown    | Documentation & Usage    |
+
 
 ## Documentation
 
+<h3>
+  <a href="https://techtoday.azurewebsites.net" target="blank" rel="noreferer">Run Locally</a>
+  <span> · </span>
+  <a href="https://expo.io/@bharadwajd/projects/TechToday">Create Content</a>
+    <span> · </span>
+  <a href="https://expo.io/@bharadwajd/projects/TechToday">Create Pages</a>
+    <span> · </span>
+  <a href="https://expo.io/@bharadwajd/projects/TechToday">Site Deployment</a>
+</h3>
+
 ## About
 
-#### TechToday was Created by Bharadwaj Duggaraju as a Side Project: It is a  Hub for News and Jobs, in a clean UI.
+JagathiFoundation.org is the website for the Jagathi Foundation nonprofit. It contains their projects, information, socials and more.
 
 ## Credits
 
-#### TechToday is dependent on two different API's besides its own primary API's. Data from these API's are fetched using 'node-fetch'
-1. NYTimes News Feed API: A great source for getting up to date news in many categories
-2. Adzuna Job Search API: An easy way to get jobs in many fields
+Designed, Created and Hosted by [Bharadwaj Duggaraju](https://bharadwaj.duggaraju.com).
 
 ## Issues
 
