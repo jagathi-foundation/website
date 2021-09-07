@@ -36,7 +36,7 @@
 
 ## About
 
-JagathiFoundation.org is the website for the Jagathi Foundation nonprofit. It contains their projects, information, socials and more.
+jagathifoundation.org is the website for the Jagathi Foundation Nonprofit. It contains their projects, information, socials and more.
 
 ## Credits
 
