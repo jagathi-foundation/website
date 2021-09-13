@@ -9,7 +9,6 @@ enum NameToUrl {
   FooterInfo = "footer-information",
   AboutFull = "about-full",
   Pillars = "pillars",
-  Founder = "founder",
   CoreTeam = "core-team-members",
   ProjectCountries = "project-countries",
   Projects = "projects"
@@ -23,7 +22,6 @@ export const ImpactURL = `${CMSURL}${NameToUrl.Impact}`;
 export const FooterURL = `${CMSURL}${NameToUrl.FooterInfo}`;
 export const AboutFullURL = `${CMSURL}${NameToUrl.AboutFull}`;
 export const PillarsURL = `${CMSURL}${NameToUrl.Pillars}`;
-export const FounderURL = `${CMSURL}${NameToUrl.Founder}`;
 export const CoreTeamURL = `${CMSURL}${NameToUrl.CoreTeam}`;
 export const ProjectCountriesURL = `${CMSURL}${NameToUrl.ProjectCountries}`
 export const ProjectsURL = `${CMSURL}${NameToUrl.Projects}`

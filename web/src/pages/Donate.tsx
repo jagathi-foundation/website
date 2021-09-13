@@ -1,50 +1,34 @@
 import React, { useEffect, useState } from "react";
-//Imports for this page.
-import Footer from "../components/Footer";
+//Import for the different components on this page.
 import Navbar from "../components/Navbar";
-import AboutUs from "../components/AboutUs";
-import CoreTeam from "../components/CoreTeam";
-//Content Getter
-import getAboutContent from "../utils/GetAboutContent";
-//Loader
+import Footer from "../components/Footer";
 import Spinner from "../components/Loader";
-import { RouteComponentProps } from "react-router";
+// Content Getter
+import getDonateContent from "../utils/GetDonateContent";
 //Types
-import {
-  AboutFullContentType,
-  CoreTeamListType,
-} from "../types/AboutTypes";
 import {
   NavLinksType,
   SocialLinksType,
   ContactInformationType,
   BankAddressType,
 } from "../types/NavFooterTypes";
+import { RouteComponentProps } from "react-router";
 
-const About: React.FC<RouteComponentProps> = ({ match }) => {
+const Donate: React.FC<RouteComponentProps> = ({ match }) => {
   //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
-  const [aboutFull, setAboutFull] = useState<AboutFullContentType | null>(null);
-  const [coreTeam, setCoreTeam] = useState<CoreTeamListType | null>(null);
   const [footerData, setFooterData] = useState<{
     socials: SocialLinksType;
     contact: ContactInformationType;
     bank: BankAddressType;
   } | null>(null);
 
-  //Get Content
+  //Get Data
   useEffect(() => {
     (async () => {
-      const [
-        navlinkData,
-        aboutFullData,
-        coreTeamData,
-        footerData,
-      ] = await getAboutContent();
+      const [navlinkData, footerData] = await getDonateContent();
 
       setNavLinks(navlinkData as NavLinksType);
-      setAboutFull(aboutFullData as AboutFullContentType);
-      setCoreTeam(coreTeamData as CoreTeamListType);
       setFooterData({
         bank: footerData.bankaddressURL,
         contact: { email: footerData.email, location: footerData.location },
@@ -59,16 +43,13 @@ const About: React.FC<RouteComponentProps> = ({ match }) => {
   }, []);
 
   // Loader
-  if (!navLinks || !footerData || !aboutFull || !coreTeam) {
+  if (!navLinks || !footerData) {
     return <Spinner />;
   }
 
   return (
     <>
-      <Navbar navLinks={navLinks} page="About" url={match} />
-      <AboutUs aboutFullContent={aboutFull} />
-
-      <CoreTeam coreTeam={coreTeam}/>
+      <Navbar navLinks={navLinks} page="Donate" url={match} />
       <Footer
         socialLinks={footerData.socials}
         contactInfo={footerData.contact}
@@ -78,4 +59,4 @@ const About: React.FC<RouteComponentProps> = ({ match }) => {
   );
 };
 
-export default About;
+export default Donate;

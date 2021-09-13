@@ -1,13 +1,12 @@
 import React from "react";
-import { FounderType, CoreTeamListType } from "../types/AboutTypes";
+import { CoreTeamListType } from "../types/AboutTypes";
 import cmsImg from "../utils/CMSImg";
 
 interface Props {
-  founder: FounderType;
   coreTeam: CoreTeamListType;
 }
 
-const CoreTeam: React.FC<Props> = ({ founder, coreTeam }) => {
+const CoreTeam: React.FC<Props> = ({coreTeam }) => {
   return (
     <>
       <h1 className="text-4xl text-center pt-1 pb-5">Our Core Team</h1>
