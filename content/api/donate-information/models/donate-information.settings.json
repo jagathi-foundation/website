@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "donate_informations",
+  "info": {
+    "name": "Donate Information"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accountname": {
+      "type": "string"
+    },
+    "accountnumber": {
+      "type": "string"
+    },
+    "accountifsc": {
+      "type": "string"
+    },
+    "accountlocation": {
+      "type": "string"
+    },
+    "donateredirecturl": {
+      "type": "string"
+    },
+    "whydonate": {
+      "type": "text"
+    },
+    "donateimg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Spinner from "../components/Loader";
+import DonateWidget from "../components/DonateWidget";
 // Content Getter
 import getDonateContent from "../utils/GetDonateContent";
 //Types
@@ -13,6 +14,7 @@ import {
   BankAddressType,
 } from "../types/NavFooterTypes";
 import { RouteComponentProps } from "react-router";
+
 
 const Donate: React.FC<RouteComponentProps> = ({ match }) => {
   //State
@@ -50,6 +52,7 @@ const Donate: React.FC<RouteComponentProps> = ({ match }) => {
   return (
     <>
       <Navbar navLinks={navLinks} page="Donate" url={match} />
+      <DonateWidget />
       <Footer
         socialLinks={footerData.socials}
         contactInfo={footerData.contact}
