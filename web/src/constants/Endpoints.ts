@@ -11,7 +11,9 @@ enum NameToUrl {
   Pillars = "pillars",
   CoreTeam = "core-team-members",
   ProjectCountries = "project-countries",
-  Projects = "projects"
+  Projects = "projects",
+  Donate = "donate-information",
+  Sponsors = "sponsors"
 }
 
 //Export the rest endpoint for each schema.
@@ -25,3 +27,5 @@ export const PillarsURL = `${CMSURL}${NameToUrl.Pillars}`;
 export const CoreTeamURL = `${CMSURL}${NameToUrl.CoreTeam}`;
 export const ProjectCountriesURL = `${CMSURL}${NameToUrl.ProjectCountries}`
 export const ProjectsURL = `${CMSURL}${NameToUrl.Projects}`
+export const DonateInformationURL = `${CMSURL}${NameToUrl.Donate}`
+export const SponsorsURL = `${CMSURL}${NameToUrl.Sponsors}`

@@ -14,11 +14,15 @@ import {
   BankAddressType,
 } from "../types/NavFooterTypes";
 import { RouteComponentProps } from "react-router";
-
+import { DonateInformationType, SponsorsType } from "../types/DonateTypes";
 
 const Donate: React.FC<RouteComponentProps> = ({ match }) => {
   //State
   const [navLinks, setNavLinks] = useState<NavLinksType | null>(null);
+  const [donateInfo, setDonateInfo] = useState<DonateInformationType | null>(
+    null
+  );
+  const [sponsors, setSponsors] = useState<SponsorsType | null>(null);
   const [footerData, setFooterData] = useState<{
     socials: SocialLinksType;
     contact: ContactInformationType;
@@ -28,9 +32,12 @@ const Donate: React.FC<RouteComponentProps> = ({ match }) => {
   //Get Data
   useEffect(() => {
     (async () => {
-      const [navlinkData, footerData] = await getDonateContent();
+      const [navlinkData, donateData, sponsorsData, footerData] =
+        await getDonateContent();
 
       setNavLinks(navlinkData as NavLinksType);
+      setDonateInfo(donateData);
+      setSponsors(sponsorsData);
       setFooterData({
         bank: footerData.bankaddressURL,
         contact: { email: footerData.email, location: footerData.location },
