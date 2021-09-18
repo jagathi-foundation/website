@@ -52,14 +52,14 @@ const Donate: React.FC<RouteComponentProps> = ({ match }) => {
   }, []);
 
   // Loader
-  if (!navLinks || !footerData) {
+  if (!navLinks || !footerData || !sponsors || !donateInfo) {
     return <Spinner />;
   }
 
   return (
     <>
       <Navbar navLinks={navLinks} page="Donate" url={match} />
-      <DonateWidget />
+      <DonateWidget sponsors={sponsors} donateInformation={donateInfo} />
       <Footer
         socialLinks={footerData.socials}
         contactInfo={footerData.contact}
