@@ -64,18 +64,18 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
         </div>
         <div className="text-center lg:px-5 lg:m-0 m-auto py-4 lg:py-0">
           <h1>Get In Touch</h1>
-          <h3
+          <h2
             className="md:flex cursor-pointer"
             onClick={navg("mailto:" + contactInfo.email)}
           >
-            <span className="px-3">📧</span> {contactInfo.email}
-          </h3>
-          <h3 className="lg:flex">
-            <span className="px-3">🏠</span>
+            <span className="px-1">📧</span> {contactInfo.email}
+          </h2>
+          <h2 className="lg:flex">
+            <span className="px-1">🏠</span>
             {contactInfo.location}
-          </h3>
+          </h2>
         </div>
-        <div className="text-center px-5 lg:py-0 py-4">
+        <div className="text-center px-5 lg:py-0 ">
           <h1>Donate</h1>
           <a href={donateLink}>
             <p>
@@ -88,11 +88,12 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
       </div>
       <div className="border-t-2 border-yellow-600 w-5/12 m-auto py-3 lg:pb-3 pb-6 text-lg">
         {new Date().getFullYear()} © All Rights Reserved by Jagathi Foundation.
+        <p>
         Created By{" "}
         <a href="https://bharadwaj.duggaraju.com" className="text-yellow-500">
           Bharadwaj Duggaraju
         </a>
-        .
+        </p>
       </div>
     </footer>
   );

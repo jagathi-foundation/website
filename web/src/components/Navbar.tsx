@@ -44,8 +44,8 @@ const Navbar: React.FC<Props> = ({ navLinks, page, url }) => {
                 <a
                   href={link.url}
                   key={key}
-                  className={`px-5  cursor-pointer hover:underline ${
-                    link.url === url.path && "underline"
+                  className={`px-5  cursor-pointer hover:underline hover:text-yellow-600 ${
+                    link.url === url.path && "underline text-yellow-600"
                   }`}
                   target="_blank"
                   rel="noreferrer"
@@ -59,8 +59,8 @@ const Navbar: React.FC<Props> = ({ navLinks, page, url }) => {
               <Link
                 to={link.url}
                 key={key}
-                className={`px-5  cursor-pointer hover:underline ${
-                  link.url === url.path && "underline"
+                className={`px-5  cursor-pointer hover:underline hover:text-yellow-600 ${
+                  link.url === url.path && "underline text-yellow-600"
                 }`}
               >
                 {link.name}

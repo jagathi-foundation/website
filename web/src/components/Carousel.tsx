@@ -37,7 +37,7 @@ const Carousel: React.FC<Props> = ({ slides }) => {
               {slide.video ? (
                 <video
                   src={cmsImg(slide.media)}
-                  style={{ height: "490px" }}
+                  style={{ maxHeight: "490px" }}
                   className="object-contain"
                   autoPlay
                   loop
@@ -46,7 +46,7 @@ const Carousel: React.FC<Props> = ({ slides }) => {
               ) : (
                 <img
                   src={cmsImg(slide.media)}
-                  style={{ height: "490px" }}
+                  style={{ maxHeight: "490px" }}
                   className="object-contain"
                   alt={slide.name}
                 />

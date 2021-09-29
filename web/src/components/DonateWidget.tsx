@@ -31,15 +31,7 @@ const DonateWidget: React.FC<Props> = ({ sponsors, donateInformation }) => {
           </div>
           <div className="border-4 border-yellow-500 py-5 lg:px-24 mt-7 rounded shadow">
             <h3 className="text-3xl">Donate Here</h3>
-            <a
-              href={donateInformation.donateredirecturl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="mt-6 bg-yellow-500 text-white py-2 px-10 rounded-md">
-                Click to Donate
-              </button>
-            </a>
+            <p className="mt-4 lg:w-96">{donateInformation.donateredirecturl}</p>
           </div>
           <div className="border-4 border-yellow-500 py-5 lg:px-24 px-10 mt-7 rounded shadow">
             <h3 className="text-3xl">Why Donate?</h3>
@@ -47,8 +39,8 @@ const DonateWidget: React.FC<Props> = ({ sponsors, donateInformation }) => {
           </div>
         </div>
       </section>
-      <div className="flex justify-center my-10 lg:mx-auto 2xl:w-5/12 lg:w-8/12 mx-20 border-4 border-yellow-500 py-5 lg:px-24 mt-7 rounded shadow items-center flex-col">
-        <h1 className="text-3xl">Huge Thanks To Our Sponsors:</h1>
+      <div className="flex justify-center my-10 lg:mx-auto 2xl:w-7/12 lg:w-8/12 mx-20 border-4 border-yellow-500 py-5 lg:px-24 mt-7 rounded shadow items-center flex-col">
+        <h1 className="text-3xl">Huge Thanks To Our Partners:</h1>
         <div className="flex my-3 space-x-6 lg:flex-row flex-col justify-center items-center">
           {sponsors.map((sponsor, i) => {
             return (

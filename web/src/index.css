@@ -11,7 +11,7 @@ body {
 
 @layer components {
   .h-ft {
-    height: 490px;
+    max-height: 490px;
   }
 
   .carousel .control-next.control-arrow,
