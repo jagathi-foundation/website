@@ -19,7 +19,7 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
   };
 
   return (
-    <footer className="w-full bg-black text-center text-white">
+    <footer className="w-full bg-black text-center text-white text-xl p-10">
       <div className="flex justify-center lg:py-5 lg:flex-row flex-col pt-2 items-center">
         <div
           className="
@@ -28,42 +28,48 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
               items-center
               justify-center
               m-auto
-              lg:m-0 lg:py-0
+              lg:m-5 lg:py-0
               py-4
             "
         >
-          <h1>Socials</h1>
-          <div className="flex mt-2">
-            <img
-              src="images/twit.png"
-              alt="tw"
-              className="w-12 h-8 lg:mx-2 mx-1 cursor-pointer"
-              onClick={navg(socialLinks.twitter)}
-            />
+          <h1 className="text-2xl">Socials</h1>
+          <div className="flex mt-3">
+            <div onClick={navg(socialLinks.twitter)}>
+              <span
+                className="iconify lg:mx-2 mx-1 cursor-pointer"
+                data-inline="false"
+                data-height="48"
+                data-icon="logos:twitter"
+                ></span>
+            </div>
             <div onClick={navg(socialLinks.facebook)}>
               <span
-                className="iconify iconify text-3xl lg:mx-2 w-12 h-8 mx-1 cursor-pointer"
+                className="iconify lg:mx-2 mx-1 cursor-pointer"
                 data-inline="false"
+                data-height="48"
                 data-icon="logos:facebook"
               ></span>
             </div>
             <div onClick={navg(socialLinks.youtube)}>
               <span
-                className="iconify text-3xl lg:mx-2 w-12 h-8 mx-1 cursor-pointer"
+                className="iconify lg:mx-2 mx-1 cursor-pointer"
                 data-inline="false"
                 data-icon="logos:youtube-icon"
+                data-height="48"
               ></span>
             </div>
-            <img
-              src="images/logos_instagram-icon.png"
-              alt="insta"
-              className="w-9 h-9 lg:mx-2 mx-1 cursor-pointer"
-              onClick={navg(socialLinks.instagram)}
-            />
+            <div onClick={navg(socialLinks.instagram)}>
+              <span
+                className="iconify lg:mx-2 mx-1 cursor-pointer text-yellow-500"
+                data-inline="false"
+                data-height="52"
+                data-icon="fe:instagram"
+                ></span>
+            </div>
           </div>
         </div>
         <div className="text-center lg:px-5 lg:m-0 m-auto py-4 lg:py-0">
-          <h1>Get In Touch</h1>
+          <h1 className="text-2xl">Get In Touch</h1>
           <h2
             className="md:flex cursor-pointer"
             onClick={navg("mailto:" + contactInfo.email)}
@@ -76,17 +82,18 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
           </h2>
         </div>
         <div className="text-center px-5 lg:py-0 ">
-          <h1>Donate</h1>
+          <h1 className="text-2xl">Donate</h1>
           <a href={donateLink}>
             <p>
               To donate, click{" "}
-              <span className="text-yellow-500 cursor-pointer">here</span> and
-              help.
+              <span className="text-yellow-500 cursor-pointer">here</span>.
+              <br/>
+              &nbsp;
             </p>
           </a>
         </div>
       </div>
-      <div className="border-t-2 border-yellow-600 w-5/12 m-auto py-3 lg:pb-3 pb-6 text-lg">
+      <div className="border-t-2 border-yellow-600 w-7/12 m-auto py-3 lg:pb-3 pb-6 text-lg">
         {new Date().getFullYear()} © All Rights Reserved by Jagathi Foundation.
         <p>
         Created By{" "}

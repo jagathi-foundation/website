@@ -30,7 +30,7 @@ const DonateWidget: React.FC<Props> = ({ sponsors, donateInformation }) => {
             <p>{donateInformation.accountlocation}</p>
           </div>
           <div className="border-4 border-yellow-500 py-5 lg:px-24 mt-7 rounded shadow">
-            <h3 className="text-3xl">Donate Here</h3>
+            <h3 className="text-3xl">Tax Exemption</h3>
             <p className="mt-4 lg:w-96">{donateInformation.donateredirecturl}</p>
           </div>
           <div className="border-4 border-yellow-500 py-5 lg:px-24 px-10 mt-7 rounded shadow">

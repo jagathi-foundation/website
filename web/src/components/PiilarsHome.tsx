@@ -16,8 +16,7 @@ const PillarsHome: React.FC<Props> = ({ pillars }) => {
       <div
         className="
           grid grid-rows-1 grid-cols-1
-          gap-y-10
-          xl:gap-y-0
+          gap-y-10 gap-x-10
           items-center
           justify-center
           ml-auto
@@ -41,13 +40,12 @@ const PillarsHome: React.FC<Props> = ({ pillars }) => {
                   shadow-lg
                   cursor-pointer
                   max-w-xs
-                  ${key === pillars.length - 1 && "xl:my-5 my-0"}
                 `}
               >
                 <img
                   src={cmsImg(topic.image)}
                   alt={topic.name}
-                  className="rounded-t-md w-full object-fit object-cente"
+                  className="rounded-t-md w-full object-fit object-center max-h-xs"
                 />
                 <h1 className="text-center pt-4 text-2xl px-3">{topic.name}</h1>
                 <p className="text-center pt-2 pb-4 px-3">

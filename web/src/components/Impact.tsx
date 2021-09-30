@@ -23,7 +23,7 @@ const Impact: React.FC<Props> = ({ impact }) => {
           <div className="py-5 lg:px-10 px-6 lg:pl-28">
             <span
               className="iconify text-center m-auto my-3 text-5xl text-yellow-800"
-              data-icon="bi:person"
+              data-icon="fluent:people-audience-24-filled"
               data-inline="false"
             ></span>
             <h1 className="lg:text-2xl text-xl text-yellow-600 px-1 text-center">
