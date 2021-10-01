@@ -43,7 +43,8 @@ const Project: React.FC<RouteComponentProps> = ({match}) => {
         <div>
             <Navbar navLinks={navLinks} page="Home" url={match} />
             <br /><br /><br /><br /><br /><br />
-            <h1 className="text-center text-3xl text-yellow-500 pb-24">Projec {(match.params as any).blob} Comming Soon!</h1>
+            <h1 className="text-center text-3xl text-yellow-500 pb-24" style={{textTransform: "capitalize"}}>Project {((match.params as any).blob as string).replace("-", " ")}</h1>
+            <h1 className="text-center text-3xl text-yellow-500 pb-24" style={{textTransform: "capitalize"}}>Coming Soon!</h1>
             <Footer
                 socialLinks={footerData.socials}
                 contactInfo={footerData.contact}
