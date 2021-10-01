@@ -85,6 +85,11 @@ const Home: React.FC<RouteComponentProps> = ({ match }) => {
 
   return (
     <>
+      {/* <div id="curtain" className="absolute top-0 right-0 flex flex-row z-10 w-screen h-screen m-0 p-0" >
+        <img alt="curtain" src="images/curtain1.jpg" className="w-2/4 h-screen"/>
+        <img alt="curtain" src="images/curtain2.jpg" className="w-2/4 h-screen"/>
+        <h1 className="text-8xl text-blue-400 absolute text-center align-middle">Welcome to Jagathi Foundation</h1>
+      </div> */}
       <Navbar navLinks={navLinks} page="Home" url={match} />
       <Carousel slides={carouselItems} />
       <AboutHome aboutBlob={aboutBlob} />

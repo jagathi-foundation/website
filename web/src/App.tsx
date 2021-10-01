@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Donate from "./pages/Donate";
+import Project from "./pages/Project";
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/projects/:blob" component={Project} />
         <Route path="/projects" component={Projects} />
         <Route path="/donate" component={Donate} />
         <Redirect to="/" />

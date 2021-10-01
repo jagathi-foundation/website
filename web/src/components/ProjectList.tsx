@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ProjectsType } from "../types/ProjectTypes";
 import cmsImg from "../utils/CMSImg";
 
@@ -21,7 +22,7 @@ const ProjectList: React.FC<Props> = ({ projects }) => {
           place-items-center
           md:grid-cols-2 md:grid-rows-2
           lg:grid-cols-3 lg:grid-rows-2
-          max-w-7xl 
+          max-w-5xl 
           my-7
           projects
         "
@@ -29,21 +30,22 @@ const ProjectList: React.FC<Props> = ({ projects }) => {
         {projects.length > 0 &&
           projects.map((project, ind) => {
             return (
-              <div
-                className="bg-gray-300 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs"
+              <Link
+                className="bg-gray-300 border-yellow-500 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs border-2"
                 key={ind}
+                to={`/projects/${project.name.toLowerCase().replace(" ", "-").replace(".", "")}`}
               >
                 <img
                   src={cmsImg(project.image)}
                   alt="W"
-                  className="rounded-t-md w-245 h-132 object-cover object-center"
-                  style={{ maxHeight: "11rem" }}
+                  className="rounded-t-md w-256 h-144"
+                  style={{ minHeight: "144px" }}
                 />
                 <h1 className="text-center pt-4 text-2xl">{project.name}</h1>
                 <p className="text-center pt-2 pb-4 px-3">
                   {project.description}
                 </p>
-              </div>
+              </Link>
             );
           })}
       </div>
