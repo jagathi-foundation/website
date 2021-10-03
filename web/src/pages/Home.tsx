@@ -7,6 +7,7 @@ import Impact from "../components/Impact";
 import PillarsHome from "../components/PiilarsHome";
 import Footer from "../components/Footer";
 import Spinner from "../components/Loader";
+import CurtainRevealBox from "react-curtain-reveal";
 
 // Content Getter
 import getHomeContent from "../utils/GetHomeContent";
@@ -40,6 +41,7 @@ const Home: React.FC<RouteComponentProps> = ({ match }) => {
     contact: ContactInformationType;
     bank: BankAddressType;
   } | null>(null);
+  const [opened, setOpened] = useState(false);
 
   //Get Data
   useEffect(() => {
@@ -83,23 +85,83 @@ const Home: React.FC<RouteComponentProps> = ({ match }) => {
     return <Spinner />;
   }
 
+  //When launch is done, change the courosel
   return (
     <>
-      {/* <div id="curtain" className="absolute top-0 right-0 flex flex-row z-10 w-screen h-screen m-0 p-0" >
-        <img alt="curtain" src="images/curtain1.jpg" className="w-2/4 h-screen"/>
-        <img alt="curtain" src="images/curtain2.jpg" className="w-2/4 h-screen"/>
-        <h1 className="text-8xl text-blue-400 absolute text-center align-middle">Welcome to Jagathi Foundation</h1>
-      </div> */}
-      <Navbar navLinks={navLinks} page="Home" url={match} />
-      <Carousel slides={carouselItems} />
-      <AboutHome aboutBlob={aboutBlob} />
-      <Impact impact={impact} />
-      <PillarsHome pillars={pillars} />
-      <Footer
-        socialLinks={footerData.socials}
-        contactInfo={footerData.contact}
-        donateLink={footerData.bank}
-      />
+      {opened || (localStorage as any).open === "true" ? (
+        <>
+          <Navbar navLinks={navLinks} page="Home" url={match} />
+          <Carousel slides={carouselItems} />
+          <AboutHome aboutBlob={aboutBlob} />
+          <Impact impact={impact} />
+          <PillarsHome pillars={pillars} />
+          <Footer
+            socialLinks={footerData.socials}
+            contactInfo={footerData.contact}
+            donateLink={footerData.bank}
+          />
+        </>
+      ) : (
+        <div style={{ width: "100%", height: "100vh", position: "relative" }}>
+          <CurtainRevealBox
+            onReveal={() => {
+              (localStorage as any).open = "true";
+              setTimeout(() => {
+                setOpened(true);
+              }, 5000);
+            }}
+            styleConfig={{
+              curtain: {
+                borderRadius: 0,
+                zIndex: "0",
+              },
+              leftPanel: {
+                background:
+                  "url('https://th.bing.com/th/id/R.b090a29f7eb76f10aa78ac389c28307b?rik=mFnktnKV5x%2flQQ&pid=ImgRaw&r=0')",
+                backgroundPosition: "center",
+                backgroundRepeat: "norepeat",
+                backgroundSize: "cover",
+              },
+              rightPanel: {
+                background:
+                  "url('https://th.bing.com/th/id/R.b090a29f7eb76f10aa78ac389c28307b?rik=mFnktnKV5x%2flQQ&pid=ImgRaw&r=0') ",
+                backgroundPosition: "center",
+                backgroundRepeat: "norepeat",
+                backgroundSize: "cover",
+              },
+              content: {
+                backgroundColor: "#fcfcf4",
+              },
+            }}
+            animationConfig={{
+              variant: "ease-in-out",
+              speed: 5,
+            }}
+          >
+            <Navbar navLinks={navLinks} page="Home" url={match} />
+            <Carousel slides={carouselItems} />
+            <AboutHome aboutBlob={aboutBlob} />
+            <Impact impact={impact} />
+            <PillarsHome pillars={pillars} />
+            <Footer
+              socialLinks={footerData.socials}
+              contactInfo={footerData.contact}
+              donateLink={footerData.bank}
+            />
+          </CurtainRevealBox>
+          {/* <div id="welcome">
+            <h1
+              className="absolute top-20 left-20   text-blue-500 pointer-events-none"
+              style={{
+                fontSize: "8rem",
+                visibility: !opened ? "visible" : "hidden",
+              }}
+            >
+              Jagathi Foundation Welcomes You!
+            </h1>
+          </div> */}
+        </div>
+      )}
     </>
   );
 };

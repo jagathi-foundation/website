@@ -19,7 +19,7 @@ const DonateWidget: React.FC<Props> = ({ sponsors, donateInformation }) => {
           src={cmsImg(donateInformation.donateimg)}
           alt="Donate"
           className="shadow rounded border-yellow-500 border-4 object-cover object-center mx-auto mb-10 lg:mb-0"
-          style={{ width: "600px" }}
+          style={{ width: "400px" }}
         />
         <div className="lg:mx-5">
           <div className="border-4 border-yellow-500 py-5 lg:px-24 rounded shadow">
@@ -31,7 +31,9 @@ const DonateWidget: React.FC<Props> = ({ sponsors, donateInformation }) => {
           </div>
           <div className="border-4 border-yellow-500 py-5 lg:px-24 mt-7 rounded shadow">
             <h3 className="text-3xl">Tax Exemption</h3>
-            <p className="mt-4 lg:w-96">{donateInformation.donateredirecturl}</p>
+            <p className="mt-4 lg:w-96">
+              {donateInformation.donateredirecturl}
+            </p>
           </div>
           <div className="border-4 border-yellow-500 py-5 lg:px-24 px-10 mt-7 rounded shadow">
             <h3 className="text-3xl">Why Donate?</h3>

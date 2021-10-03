@@ -10,9 +10,7 @@ interface Props {
 const PillarsHome: React.FC<Props> = ({ pillars }) => {
   return (
     <>
-      <h1 className="text-center pt-10 text-3xl px-6">
-        Our Pillars
-      </h1>
+      <h1 className="text-center pt-10 text-3xl px-8">Our Pillars</h1>
       <div
         className="
           grid grid-rows-1 grid-cols-1
@@ -22,7 +20,7 @@ const PillarsHome: React.FC<Props> = ({ pillars }) => {
           ml-auto
           mr-auto
           xl:mb-8
-          xl:mt-5
+          xl:mt-7
           mt-8
           mb-12
           place-items-center
@@ -56,7 +54,6 @@ const PillarsHome: React.FC<Props> = ({ pillars }) => {
           );
         })}
       </div>
-  
     </>
   );
 };

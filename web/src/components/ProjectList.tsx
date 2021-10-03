@@ -10,7 +10,11 @@ interface Props {
 const ProjectList: React.FC<Props> = ({ projects }) => {
   return (
     <>
-      {projects.length === 0 && <h1 className="text-center text-2xl mt-10 text-yellow-600">No Projects Found!</h1>}
+      {projects.length === 0 && (
+        <h1 className="text-center text-2xl mt-10 text-yellow-600">
+          No Projects Found!
+        </h1>
+      )}
       <div
         className="
           grid grid-rows-1 grid-cols-1
@@ -26,14 +30,17 @@ const ProjectList: React.FC<Props> = ({ projects }) => {
           my-7
           projects
         "
-      > 
+      >
         {projects.length > 0 &&
           projects.map((project, ind) => {
             return (
               <Link
                 className="bg-gray-300 border-yellow-500 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs border-2"
                 key={ind}
-                to={`/projects/${project.name.toLowerCase().replace(" ", "-").replace(".", "")}`}
+                to={`/projects/${project.name
+                  .toLowerCase()
+                  .replace(" ", "-")
+                  .replace(".", "")}`}
               >
                 <img
                   src={cmsImg(project.image)}
