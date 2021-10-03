@@ -1,7 +1,7 @@
 <h1 align="center" size="20">Jagathi Foundation</h1>
 
 <p align="center">
-  <strong>❤️ The Site for a Nonprofit serving the needy in India.</strong>
+  <strong>❤️ The Site for a Nonprofit serving the needy in India. Created by Bharadwaj Duggaraju</strong>
 </p>
 
 

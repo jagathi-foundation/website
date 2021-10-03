@@ -69,3 +69,8 @@
 5) Hosting Plan
 
 
+# 10/2
+1) SO MUCH DONE!
+2) Entire Website Complete!
+3) Entire Website Hosted
+4) Testmonials and Credit
