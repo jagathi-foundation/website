@@ -41,7 +41,7 @@ const Home: React.FC<RouteComponentProps> = ({ match }) => {
     contact: ContactInformationType;
     bank: BankAddressType;
   } | null>(null);
-  const [opened, setOpened] = useState(false);
+  const [opened, setOpened] = useState(true);
 
   //Get Data
   useEffect(() => {
@@ -149,17 +149,6 @@ const Home: React.FC<RouteComponentProps> = ({ match }) => {
               donateLink={footerData.bank}
             />
           </CurtainRevealBox>
-          {/* <div id="welcome">
-            <h1
-              className="absolute top-20 left-20   text-blue-500 pointer-events-none"
-              style={{
-                fontSize: "8rem",
-                visibility: !opened ? "visible" : "hidden",
-              }}
-            >
-              Jagathi Foundation Welcomes You!
-            </h1>
-          </div> */}
         </div>
       )}
     </>

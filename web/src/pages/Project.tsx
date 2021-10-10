@@ -7,7 +7,9 @@ import Footer from '../components/Footer';
 import getProjectContent from '../utils/GetProjectContent';
 //Types
 import { NavLinksType, SocialLinksType, ContactInformationType, BankAddressType } from '../types/NavFooterTypes';
+import { ProjectType } from '../types/ProjectTypes';
 import { RouteComponentProps } from 'react-router';
+import cmsImg from "../utils/CMSImg";
 
 const Project: React.FC<RouteComponentProps> = ({match}) => {
     //State
@@ -18,9 +20,12 @@ const Project: React.FC<RouteComponentProps> = ({match}) => {
         bank: BankAddressType;
     } | null>(null);
 
+    const [projectData, setProjectData] = useState<ProjectType |null>(null);
+    const id = (match.params as any).blob as string;
     useEffect(() => {
         (async () => {
-            const [navData, footerData] = await getProjectContent();
+            const [navData, footerData, projectData] = await getProjectContent(id);
+            setProjectData(projectData as ProjectType);
             setNavLinks(navData as NavLinksType);
             setFooterData({
                 bank: footerData.bankaddressURL,
@@ -35,22 +40,26 @@ const Project: React.FC<RouteComponentProps> = ({match}) => {
         })()
     }, [])
 
-    if(!navLinks || !footerData) {
+    if(!navLinks || !footerData || !projectData) {
         return <Spinner />
     }
 
     return (
-        <div>
+        <>
             <Navbar navLinks={navLinks} page="Home" url={match} />
-            <br /><br /><br /><br /><br /><br />
-            <h1 className="text-center text-3xl text-yellow-500 pb-24" style={{textTransform: "capitalize"}}>Project {((match.params as any).blob as string).replace("-", " ")}</h1>
-            <h1 className="text-center text-3xl text-yellow-500 pb-24" style={{textTransform: "capitalize"}}>Coming Soon!</h1>
+            <div style={{ marginTop: "9.6rem" }}>
+                <section className="flex flex-col justify-center text-center">
+                <h1 className="text-center text-3xl text-yellow-500 pb-10" style={{textTransform: "capitalize"}}>{projectData.name}</h1>
+                <img className="object-center max-w-xl pb-10 mx-auto" src={cmsImg(projectData.image)} alt="project description"></img>
+                <h2 className="text-justify text-xl pb-10 lg:mx-80 mx-48">{projectData!.description}</h2>
+                </section>
+            </div>
             <Footer
                 socialLinks={footerData.socials}
                 contactInfo={footerData.contact}
                 donateLink={footerData.bank}
             />
-        </div>
+        </>
     )
 }
 
