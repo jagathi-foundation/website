@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   SocialLinksType,
   ContactInformationType,
@@ -19,7 +20,7 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
   };
 
   return (
-    <footer className="w-full bg-black text-center text-white text-xl p-10">
+    <footer className="w-full bg-black text-center text-white text-lg p-5">
       <div className="flex justify-center lg:py-5 lg:flex-row flex-col pt-2 items-center">
         <div
           className="
@@ -40,7 +41,7 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
                 data-inline="false"
                 data-height="48"
                 data-icon="logos:twitter"
-                ></span>
+              ></span>
             </div>
             <div onClick={navg(socialLinks.facebook)}>
               <span
@@ -64,7 +65,7 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
                 data-inline="false"
                 data-height="52"
                 data-icon="fe:instagram"
-                ></span>
+              ></span>
             </div>
           </div>
         </div>
@@ -83,23 +84,26 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
         </div>
         <div className="text-center px-5 lg:py-0 ">
           <h1 className="text-2xl">Donate</h1>
-          <a href={donateLink}>
+          <Link to={donateLink}>
             <p>
               To donate, click{" "}
               <span className="text-yellow-500 cursor-pointer">here</span>.
-              <br/>
+              <br />
               &nbsp;
             </p>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="border-t-2 border-yellow-600 w-7/12 m-auto py-3 lg:pb-3 pb-6 text-xl">
         {new Date().getFullYear()} © All Rights Reserved by Jagathi Foundation.
         <p>
-        Created By{" "}
-        <a href="https://bharadwaj.duggaraju.com" className="text-yellow-500 text-2xl">
-          Bharadwaj Duggaraju
-        </a>
+          Created By{" "}
+          <a
+            href="https://bharadwaj.duggaraju.com"
+            className="text-yellow-500 text-2xl"
+          >
+            Bharadwaj Duggaraju
+          </a>
         </p>
       </div>
     </footer>

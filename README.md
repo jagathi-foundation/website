@@ -11,6 +11,8 @@
   <a href="https://admin.jagathifoundation.org" target="blank" rel="noreferer">Admin</a>
   <span> · </span>
   <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/tree/master/docs">Documentation</a>
+  <span> · </span>
+  <a href="#credits">Credits</a>
 </h3>
 
 ## Codebase
@@ -40,7 +42,13 @@ jagathifoundation.org is the website for the Jagathi Foundation Nonprofit. It co
 
 ## Credits
 
-Designed, Created and Hosted by [Bharadwaj Duggaraju](https://bharadwaj.duggaraju.com).
+Designed, Created and Hosted by [Bharadwaj Duggaraju](https://bharadwaj.duggaraju.com)
+
+### Testamonials
+
+### Certificate
+
+### Volunteer Hours (Logged)
 
 ## Issues
 
