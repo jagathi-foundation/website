@@ -21,9 +21,9 @@ const PillarsHome: React.FC<Props> = ({ pillars }) => {
           justify-center
           ml-auto
           mr-auto
-          xl:mb-8
+          xl:mb-12
           xl:mt-5
-          mt-8
+          mt-9
           mb-12
           place-items-center
           lg:grid-cols-2 lg:grid-rows-2
