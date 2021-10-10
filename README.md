@@ -57,7 +57,11 @@ Designed, Created and Hosted by [Bharadwaj Duggaraju](https://bharadwaj.duggaraj
 
 ### Certificate
 
+Comming Soon....
+
 ### Volunteer Hours (Logged)
+
+30 Hours Total!
 
 ## Issues
 

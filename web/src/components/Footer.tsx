@@ -21,7 +21,7 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
 
   return (
     <footer className="w-full bg-black text-center text-white text-lg p-5">
-      <div className="flex justify-center lg:py-5 lg:flex-row flex-col pt-2 items-center">
+      <div className="flex justify-center lg:py-0 lg:flex-row flex-col pt-2 items-center">
         <div
           className="
               text-center
@@ -72,7 +72,7 @@ const Footer: React.FC<Props> = ({ socialLinks, contactInfo, donateLink }) => {
         <div className="text-center lg:px-5 lg:m-0 m-auto py-4 lg:py-0">
           <h1 className="text-2xl">Get In Touch</h1>
           <h2
-            className="md:flex cursor-pointer"
+            className="md:flex cursor-pointer mt-3"
             onClick={navg("mailto:" + contactInfo.email)}
           >
             <span className="px-1">📧</span> {contactInfo.email}
