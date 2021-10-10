@@ -28,7 +28,7 @@ const PillarsHome: React.FC<Props> = ({ pillars }) => {
           place-items-center
           lg:grid-cols-2 lg:grid-rows-2
           max-w-3xl
-        "
+        " 
       >
         {pillars.map((topic, key) => {
           return (
