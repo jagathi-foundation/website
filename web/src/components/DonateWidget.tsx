@@ -41,8 +41,8 @@ const DonateWidget: React.FC<Props> = ({ sponsors, donateInformation }) => {
           </div>
         </div>
       </section>
-      <div className="flex justify-center my-10 lg:mx-auto 2xl:w-7/12 lg:w-8/12 mx-20 border-4 border-yellow-500 py-5 lg:px-24 mt-7 rounded shadow items-center flex-col">
-        <h1 className="text-3xl">Thanks To Our Partners:</h1>
+      <div className="flex justify-center my-10 lg:mx-auto 2xl:w-7/12 lg:w-8/12 mx-10 border-4 border-yellow-500 py-5 lg:px-24 mt-7 rounded shadow items-center flex-col">
+        <h1 className="text-3xl">Thanks To Our Partners</h1>
         <div className="flex my-3 space-x-6 lg:flex-row flex-col justify-center items-center">
           {sponsors.map((sponsor, i) => {
             return (
@@ -50,7 +50,7 @@ const DonateWidget: React.FC<Props> = ({ sponsors, donateInformation }) => {
                 src={cmsImg(sponsor.image)}
                 alt={sponsor.name}
                 key={i}
-                className="h-20 object-contain"
+                className="h-20 object-contain max-w-xs"
               />
             );
           })}

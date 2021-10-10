@@ -37,7 +37,7 @@ const ProjectList: React.FC<Props> = ({ projects }) => {
               <Link
                 className="bg-gray-300 border-yellow-500 mx-10 rounded-md shadow-lg cursor-pointer max-w-xs border-2"
                 key={ind}
-                to={`/projects/${project.name
+                to={`/projects/${project.id.toString()
                   .toLowerCase()
                   .replace(" ", "-")
                   .replace(".", "")}`}
@@ -46,12 +46,9 @@ const ProjectList: React.FC<Props> = ({ projects }) => {
                   src={cmsImg(project.image)}
                   alt="W"
                   className="rounded-t-md w-256 h-144"
-                  style={{ minHeight: "144px" }}
+                  style={{ minHeight: "144px", maxHeight: "144px", minWidth: "256px", maxWidth:"256px" }}
                 />
-                <h1 className="text-center pt-4 text-2xl">{project.name}</h1>
-                <p className="text-center pt-2 pb-4 px-3">
-                  {project.description}
-                </p>
+                <h1 className="text-center pt-4 text-xl">{project.name}</h1>
               </Link>
             );
           })}

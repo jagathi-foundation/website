@@ -1,4 +1,5 @@
-export interface Project {
+export interface ProjectType {
+  id: number;
   image: any;
   description: string;
   name: string;
@@ -7,6 +8,6 @@ export interface Project {
   projectstart: string;
 }
 
-export type ProjectsType = Project[];
+export type ProjectsType = ProjectType[];
 
 export type CountriesListType = string[];
