@@ -46,6 +46,15 @@ Designed, Created and Hosted by [Bharadwaj Duggaraju](https://bharadwaj.duggaraj
 
 ### Testamonials
 
+##### Durga Kalyani - Founder
+>Epic!
+
+##### Ajith Moni - VP
+>Cool!
+
+
+
+
 ### Certificate
 
 ### Volunteer Hours (Logged)
