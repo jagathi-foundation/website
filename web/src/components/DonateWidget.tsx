@@ -50,6 +50,7 @@ const DonateWidget: React.FC<Props> = ({ sponsors, donateInformation }) => {
                 src={cmsImg(sponsor.image)}
                 alt={sponsor.name}
                 key={i}
+                title={sponsor.name}
                 className="h-20 object-contain max-w-xs"
               />
             );
