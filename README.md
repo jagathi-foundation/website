@@ -8,7 +8,7 @@
 <h3 align="center">
   <a href="https://jagathifoundation.org" target="blank" rel="noreferer">Website</a>
   <span> · </span>
-  <a href="https://admin.jagathifoundation.org" target="blank" rel="noreferer">Admin</a>
+  <a href="https://api.jagathifoundation.org/admin" target="blank" rel="noreferer">Admin</a>
   <span> · </span>
   <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/tree/master/docs">Documentation</a>
   <span> · </span>
