@@ -22,9 +22,9 @@ const ProjectsWidget: React.FC<Props> = ({
   setSort,
 }) => {
   return (
-    <div style={{marginTop: "4.1rem"}}>
+    <div style={{ marginTop: "4.1rem" }}>
       <section className="lg:justify-between flex w-full my-4 items-center lg:flex-row flex-col justify-center">
-        <div className="flex space-x-5 lg:ml-16">
+        <div className="flex space-x-5 lg:ml-16 px-5">
           <button
             className="my-5 bg-yellow-500 text-white rounded px-5 py-1 hover:bg-yellow-600 shadow-md"
             onClick={() => setSort("AZ")}
