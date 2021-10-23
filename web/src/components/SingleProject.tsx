@@ -8,7 +8,7 @@ interface Props {
 
 const SingleProject: React.FC<Props> = ({ project }) => {
   return (
-    <div style={{ marginTop: "10.6rem" }}>
+    <div style={{ marginTop: "9.6rem" }}>
       <section className="flex flex-col justify-center text-center">
         <h1
           className="text-center text-4xl text-yellow-500 pb-10"
@@ -21,7 +21,7 @@ const SingleProject: React.FC<Props> = ({ project }) => {
           src={cmsImg(project.image)}
           alt="project description"
         ></img>
-        <h2 className="text-justify text-xl pb-10 lg:mx-80 mx-48">
+        <h2 className="text-center text-lg pb-10 max-w-2xl mx-auto px-10">
           {project!.description}
         </h2>
       </section>
