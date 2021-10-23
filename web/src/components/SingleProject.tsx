@@ -17,7 +17,7 @@ const SingleProject: React.FC<Props> = ({ project }) => {
           {project.name}
         </h1>
         <img
-          className="object-center max-w-xl pb-10 mx-auto"
+          className="object-center lg:max-w-2xl pb-10 mx-auto px-10"
           src={cmsImg(project.image)}
           alt="project description"
         ></img>
