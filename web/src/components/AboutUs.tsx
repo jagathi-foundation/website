@@ -13,7 +13,7 @@ const AboutUs: React.FC<Props> = ({ aboutFullContent }) => {
         src={cmsImg(aboutFullContent.coverimg)}
         alt="Company"
         className="
-          xl:w-6/12
+          xl:w-8/12
           object-cover object-center
           mx-auto
           my-10
@@ -30,7 +30,7 @@ const AboutUs: React.FC<Props> = ({ aboutFullContent }) => {
           justify-between
           mx-auto
           my-10
-          xl:w-6/12
+          xl:w-8/12
           w-3/4
           text-center
           lg:flex-row

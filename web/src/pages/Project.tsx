@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Spinner from "../components/Loader";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SingleProject from "../components/SingleProject";
 //Page Content Getter
 import getProjectContent from "../utils/GetProjectContent";
 //Types
@@ -14,7 +15,6 @@ import {
 } from "../types/NavFooterTypes";
 import { ProjectType } from "../types/ProjectTypes";
 import { RouteComponentProps } from "react-router";
-import cmsImg from "../utils/CMSImg";
 
 const Project: React.FC<RouteComponentProps> = ({ match }) => {
   //State
@@ -52,24 +52,7 @@ const Project: React.FC<RouteComponentProps> = ({ match }) => {
   return (
     <>
       <Navbar navLinks={navLinks} page="Home" url={match} />
-      <div style={{ marginTop: "9.6rem" }}>
-        <section className="flex flex-col justify-center text-center">
-          <h1
-            className="text-center text-3xl text-yellow-500 pb-10"
-            style={{ textTransform: "capitalize" }}
-          >
-            {projectData.name}
-          </h1>
-          <img
-            className="object-center max-w-xl pb-10 mx-auto"
-            src={cmsImg(projectData.image)}
-            alt="project description"
-          ></img>
-          <h2 className="text-justify text-xl pb-10 lg:mx-80 mx-48">
-            {projectData!.description}
-          </h2>
-        </section>
-      </div>
+      <SingleProject project={projectData} />
       <Footer
         socialLinks={footerData.socials}
         contactInfo={footerData.contact}
