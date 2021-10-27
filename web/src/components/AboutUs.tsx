@@ -22,6 +22,7 @@ const AboutUs: React.FC<Props> = ({ aboutFullContent }) => {
           w-3/4
 
         "
+        style={{ maxWidth: "65rem" }}
       />
 
       <div
@@ -37,18 +38,6 @@ const AboutUs: React.FC<Props> = ({ aboutFullContent }) => {
           flex-col
         "
       >
-        {/* <div>
-          <h1 className="text-3xl">Our Vision</h1>
-          <p className="py-4 text-lg px-1">{aboutFullContent.ourvision}</p>
-        </div>
-        <div>
-          <h1 className="text-3xl">Founding Story</h1>
-          <p className="py-4 text-lg px-1">{aboutFullContent.foundingstory}</p>
-        </div>
-        <div>
-          <h1 className="text-3xl">What We Do</h1>
-          <p className="py-4 text-lg px-1">{aboutFullContent.whatwedo}</p>
-        </div> */}
         <p className="text-left">
           <h1 className="mb-4 text-black text-2xl">Women Welfare</h1>
           <p>

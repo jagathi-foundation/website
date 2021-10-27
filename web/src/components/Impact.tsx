@@ -12,8 +12,8 @@ const Impact: React.FC<Props> = ({ impact }) => {
       <div className="w-full bg-gray-300">
         <div className="flex justify-between items-center m-auto max-w-7xl md:flex-row flex-col">
           <div className="pb-5 pt-3 lg:pt-5 lg:px-10 px-6">
-          <span className="iconify  text-center m-auto my-3 text-4xl text-yellow-800" data-icon="grommet-icons:projects"></span>
-            <h1 className="lg:text-3xl text-2xl text-yellow-600 px-1 text-center">
+          <span className="iconify  text-center m-auto my-3 text-3xl text-yellow-800" data-icon="grommet-icons:projects"></span>
+            <h1 className="lg:text-2xl text-xl text-yellow-600 px-1 text-center">
             {impact.projectcount}
             </h1>
             <h1 className="lg:text-2xl text-xl">
@@ -22,11 +22,11 @@ const Impact: React.FC<Props> = ({ impact }) => {
           </div>
           <div className="py-5 lg:px-10 px-6 lg:pl-28">
             <span
-              className="iconify text-center m-auto my-3 text-5xl text-yellow-800"
+              className="iconify text-center m-auto my-3 text-4xl text-yellow-800"
               data-icon="fluent:people-audience-24-filled"
               data-inline="false"
             ></span>
-            <h1 className="lg:text-3xl text-2xl text-yellow-600 px-1 text-center">
+            <h1 className="lg:text-2xl text-xl text-yellow-600 px-1 text-center">
             {impact.volunteers}
             </h1>
             <h1 className="lg:text-2xl text-xl">
@@ -35,11 +35,11 @@ const Impact: React.FC<Props> = ({ impact }) => {
           </div>
           <div className="py-5 lg:px-10 px-6">
             <span
-              className="iconify text-center text-5xl m-auto my-3 text-yellow-800"
+              className="iconify text-center text-4xl m-auto my-3 text-yellow-800"
               data-inline="false"
               data-icon="ant-design:field-time-outlined"
             ></span>
-            <h1 className="lg:text-3xl text-2xl text-yellow-600 px-1 text-center">
+            <h1 className="lg:text-2xl text-xl text-yellow-600 px-1 text-center">
               {impact.volunteerhours}
             </h1>
             <h1 className="lg:text-2xl text-xl">

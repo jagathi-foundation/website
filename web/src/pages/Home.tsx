@@ -25,6 +25,8 @@ import {
   ProjectTopicTypeList,
 } from "../types/HomeTypes";
 import { RouteComponentProps } from "react-router";
+//Constants
+import CurtainConfig from "../constants/CurtainConfig";
 
 const Home: React.FC<RouteComponentProps> = ({ match }) => {
   //State
@@ -41,7 +43,8 @@ const Home: React.FC<RouteComponentProps> = ({ match }) => {
     contact: ContactInformationType;
     bank: BankAddressType;
   } | null>(null);
-  const [opened, setOpened] = useState(true);
+  // eslint-disable-next-line
+  const [opened, setOpened] = useState(false);
 
   //Get Data
   useEffect(() => {
@@ -85,69 +88,38 @@ const Home: React.FC<RouteComponentProps> = ({ match }) => {
     return <Spinner />;
   }
 
-  //When launch is done, change the courosel
+  const reveal = () => {
+    (localStorage as any).open = "true";
+    setTimeout(() => {
+      setOpened(true);
+    }, 5000);
+  };
+
+  const showCurtain = false; /*opened || !(localStorage as any).open*/
+
+  const content = (
+    <>
+      <Navbar navLinks={navLinks} page="Home" url={match} />
+      <Carousel slides={carouselItems} />
+      <AboutHome aboutBlob={aboutBlob} />
+      <Impact impact={impact} />
+      <PillarsHome pillars={pillars} />
+      <Footer
+        socialLinks={footerData.socials}
+        contactInfo={footerData.contact}
+        donateLink={footerData.bank}
+      />
+    </>
+  );
+
   return (
     <>
-      {opened || (localStorage as any).open === "true" ? (
-        <>
-          <Navbar navLinks={navLinks} page="Home" url={match} />
-          <Carousel slides={carouselItems} />
-          <AboutHome aboutBlob={aboutBlob} />
-          <Impact impact={impact} />
-          <PillarsHome pillars={pillars} />
-          <Footer
-            socialLinks={footerData.socials}
-            contactInfo={footerData.contact}
-            donateLink={footerData.bank}
-          />
-        </>
+      {!showCurtain ? (
+        content
       ) : (
-        <div style={{ width: "100%", height: "100vh", position: "relative" }}>
-          <CurtainRevealBox
-            onReveal={() => {
-              (localStorage as any).open = "true";
-              setTimeout(() => {
-                setOpened(true);
-              }, 5000);
-            }}
-            styleConfig={{
-              curtain: {
-                borderRadius: 0,
-                zIndex: "0",
-              },
-              leftPanel: {
-                background:
-                  "url('https://th.bing.com/th/id/R.b090a29f7eb76f10aa78ac389c28307b?rik=mFnktnKV5x%2flQQ&pid=ImgRaw&r=0')",
-                backgroundPosition: "center",
-                backgroundRepeat: "norepeat",
-                backgroundSize: "cover",
-              },
-              rightPanel: {
-                background:
-                  "url('https://th.bing.com/th/id/R.b090a29f7eb76f10aa78ac389c28307b?rik=mFnktnKV5x%2flQQ&pid=ImgRaw&r=0') ",
-                backgroundPosition: "center",
-                backgroundRepeat: "norepeat",
-                backgroundSize: "cover",
-              },
-              content: {
-                backgroundColor: "#fcfcf4",
-              },
-            }}
-            animationConfig={{
-              variant: "ease-in-out",
-              speed: 5,
-            }}
-          >
-            <Navbar navLinks={navLinks} page="Home" url={match} />
-            <Carousel slides={carouselItems} />
-            <AboutHome aboutBlob={aboutBlob} />
-            <Impact impact={impact} />
-            <PillarsHome pillars={pillars} />
-            <Footer
-              socialLinks={footerData.socials}
-              contactInfo={footerData.contact}
-              donateLink={footerData.bank}
-            />
+        <div className="w-full relative h-fvh">
+          <CurtainRevealBox onReveal={reveal} {...CurtainConfig}>
+            {content}
           </CurtainRevealBox>
         </div>
       )}
