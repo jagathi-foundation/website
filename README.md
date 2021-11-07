@@ -35,7 +35,6 @@
 |  <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/blob/master/docs/CreatePages.md" target="blank" rel="noreferer">Create Pages</a>| How To Create Pages On The Site |
 |  <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/blob/master/docs/Deployment.md" target="blank" rel="noreferer">Deployment</a>| Info About Site Deployment |
 
-
 ## About
 
 jagathifoundation.org is the website for the Jagathi Foundation Nonprofit. It contains their projects, information, socials and more.
@@ -47,12 +46,10 @@ Designed, Created and Hosted by [Bharadwaj Duggaraju](https://bharadwaj.duggaraj
 ### Testamonials
 
 ##### Durga Kalyani - Founder
->Epic!
+>Jagathi Foundation with a personal touch from it's founder Durga Kalyani appreciates & thanks you for single handedly making our website go-live in time for our 1st anniversary. During this association, we were able to appreciate your solutions across HTML, CSS, Javascript, REST, CMS technologies, tools & frameworks helped us. We highly recommend Bharadwaj and wish to associate with him in our future projects.
 
 ##### Ajith Moni - VP
->Cool!
-
-
+>Your knowledge, solutioning, skillset and hard work are commendable and talked about very highly by the board members and review panel.
 
 
 ### Certificate
@@ -61,7 +58,7 @@ Designed, Created and Hosted by [Bharadwaj Duggaraju](https://bharadwaj.duggaraj
 
 ### Volunteer Hours (Logged)
 
-30 Hours Total!
+60 Hours Total!
 
 ## Issues
 
