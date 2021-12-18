@@ -58,7 +58,7 @@ Designed, Created and Hosted by [Bharadwaj Duggaraju](https://bharadwaj.duggaraj
 
 ### Volunteer Hours (Logged)
 
-60 Hours Total!
+60 Hours Total! - All requirements met!
 
 ## Issues
 
