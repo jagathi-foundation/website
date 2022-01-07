@@ -13,6 +13,8 @@
   <a href="https://github.com/bharadwajduggaraju/Jagathi-Foundation/tree/master/docs">Documentation</a>
   <span> · </span>
   <a href="#credits">Credits</a>
+  <span> · </span>
+  <a href="http://jagathifoundation.org/report.html">Analytics</a>
 </h3>
 
 ## Codebase
