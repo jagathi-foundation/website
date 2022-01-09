@@ -14,7 +14,7 @@
   <span> · </span>
   <a href="#credits">Credits</a>
   <span> · </span>
-  <a href="http://jagathifoundation.org/report.html">Analytics</a>
+  <a href="http://jagathifoundation.org/report">Analytics</a>
 </h3>
 
 ## Codebase
