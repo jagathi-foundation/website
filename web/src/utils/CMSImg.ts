@@ -1,8 +1,8 @@
 export default function cmsImg(imgContext: any) {
   const urlWithoutEndSlash =
     process.env.NODE_ENV === "development"
-      ? "http://api.jagathifoundation.org"
-      : "http://api.jagathifoundation.org";
+      ? "//api.jagathifoundation.org"
+      : "//api.jagathifoundation.org";
 
   let imgURl = "";
 
